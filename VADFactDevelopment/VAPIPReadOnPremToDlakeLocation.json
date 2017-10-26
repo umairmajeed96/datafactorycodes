@@ -1,0 +1,247 @@
+{
+  "name": "VAPIPReadOnPremToDlakeLocation",
+  "properties": {
+    "description": "Copy Data From onpremises sql to datalake store - Location information",
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[DIRPARTYTABLE]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadDIRPARTYTABLE"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteDIRPARTYTABLE"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE DIRPARTYTABLE",
+        "description": "Copy DIRPARTYTABLE table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[INVENTLOCATION]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadINVENTLOCATION"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteINVENTLOCATION"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE INVENTLOCATION",
+        "description": "Copy INVENTLOCATION table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[LOGISTICSPOSTALADDRESS]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadLOGISTICSPOSTALADDRESS"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteLOGISTICSPOSTALADDRESS"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE LOGISTICSPOSTALADDRESS",
+        "description": "Copy LOGISTICSPOSTALADDRESS table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILCHANNELTABLE]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRETAILCHANNELTABLE"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRETAILCHANNELTABLE"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILCHANNELTABLE",
+        "description": "Copy RETAILCHANNELTABLE table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILSTORELOCATORGROUP]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRETAILSTORELOCATORGROUP"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRETAILSTORELOCATORGROUP"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILSTORELOCATORGROUP",
+        "description": "Copy RETAILSTORELOCATORGROUP table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILTERMINALTABLE]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRETAILTERMINALTABLE"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRETAILTERMINALTABLE"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILTERMINALTABLE",
+        "description": "Copy RETAILTERMINALTABLE table to text file"
+      }
+    ],
+    "start": "2017-10-22T00:00:00Z",
+    "end": "2017-10-22T23:59:59Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

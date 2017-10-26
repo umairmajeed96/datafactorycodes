@@ -1,0 +1,118 @@
+{
+  "name": "VADSUnifReadEcoresProduct",
+  "properties": {
+    "structure": [
+      {
+        "name": "PRODUCTMASTER",
+        "type": "Int64"
+      },
+      {
+        "name": "RETAITOTALWEIGHT",
+        "type": "Int32"
+      },
+      {
+        "name": "VARIANTCONFIGURATIONTECHNOLOGY",
+        "type": "Int32"
+      },
+      {
+        "name": "RETAILCOLORGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "RETAILSIZEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "RETAILSTYLEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INSTANCERELATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "DISPLAYPRODUCTNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "SEARCHNAME",
+        "type": "String"
+      },
+      {
+        "name": "PRODUCTTYPE",
+        "type": "Int32"
+      },
+      {
+        "name": "PDSCWPRODUCT",
+        "type": "Int32"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int32"
+      },
+      {
+        "name": "RELATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "ISPRODUCTVARIANTUNITCONVERSIONENABLED",
+        "type": "Int32"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "PLMCOLORCONTROLMODE",
+        "type": "Int64"
+      },
+      {
+        "name": "PLMCONFIGURATIONGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PLMMATERIALTYPEENUM",
+        "type": "Int32"
+      },
+      {
+        "name": "PLMSIZERANGEID",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "EcoresProduct.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

@@ -1,0 +1,165 @@
+{
+  "name": "VAPIPDeltaProduct",
+  "properties": {
+    "activities": [
+      {
+        "type": "DataLakeAnalyticsU-SQL",
+        "typeProperties": {
+          "scriptPath": "unifiedusql/VAProductJoin.usql",
+          "scriptLinkedService": "VALnkBlobStorage",
+          "degreeOfParallelism": 2,
+          "parameters": {
+            "dmfproductentity": "/DynamicsAX/DMFPRODUCTENTITY.Csv",
+            "dmfproductvariantentity": "/DynamicsAX/DMFPRODUCTVARIANTENTITY.Csv",
+            "ecoresproduct": "/DynamicsAX/ECORESPRODUCT.Csv",
+            "ecoresproducttranslation": "/DynamicsAX/ECORESPRODUCTTRANSLATION.Csv",
+            "egxproductbrand": "/DynamicsAX/EGXPRODUCTBRAND.Csv",
+            "inventdimcombination": "/DynamicsAX/INVENTDIMCOMBINATION.Csv",
+            "inventitembarcode": "/DynamicsAX/INVENTITEMBARCODE.Csv",
+            "inventitemgroupitem": "/DynamicsAX/INVENTITEMGROUPITEM.Csv",
+            "inventitemprice": "/DynamicsAX/INVENTITEMPRICE.Csv",
+            "inventtable": "/DynamicsAX/INVENTTABLE.Csv",
+            "pricedisctable": "/DynamicsAX/PRICEDISCTABLE.Csv",
+            "retailseasontable": "/DynamicsAX/RETAILSEASONTABLE.Csv",
+            "product": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Product/NEW/Product.Csv"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSUnifReadDMFProductEntity"
+          },
+          {
+            "name": "VADSUnifReadDMFProductVariantEntity"
+          },
+          {
+            "name": "VADSUnifReadECORESPRODUCT"
+          },
+          {
+            "name": "VADSUnifReadECORESPRODUCTTRANSLATION"
+          },
+          {
+            "name": "VADSUnifReadEGXProductBrand"
+          },
+          {
+            "name": "VADSUnifReadInventDimCombination"
+          },
+          {
+            "name": "VADSUnifReadInventItemBarCode"
+          },
+          {
+            "name": "VADSUnifReadInventItemGroupItem"
+          },
+          {
+            "name": "VADSUnifReadInventItemPrice"
+          },
+          {
+            "name": "VADSUnifReadInventTable"
+          },
+          {
+            "name": "VADSUnifReadPriceDiscTable"
+          },
+          {
+            "name": "VADSUnifReadRetailSeasonTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSUnifWriteProduct"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "U-SQL Script to combine the data",
+        "linkedServiceName": "VALnkDataLakeAnalytics"
+      },
+      {
+        "type": "DataLakeAnalyticsU-SQL",
+        "typeProperties": {
+          "scriptPath": "deltausql/VAProductDelta.usql",
+          "scriptLinkedService": "VALnkBlobStorage",
+          "degreeOfParallelism": 2,
+          "parameters": {
+            "newprd_file": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Product/NEW/Product.Csv",
+            "oldprd_file": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Product/OLD/Product.Csv",
+            "product": "$$Text.Format('wasb://productdelta@vablobstorage.blob.core.windows.net/Product.Csv')"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSNewProduct"
+          },
+          {
+            "name": "VADSOldProduct"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSDeltaProduct"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "U-SQL Script to compare the data",
+        "linkedServiceName": "VALnkDataLakeAnalytics"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "AzureDataLakeStoreSource",
+            "recursive": false
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "copyBehavior": "MergeFiles",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSNewProduct"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSOldProduct"
+          }
+        ],
+        "policy": {
+          "timeout": "1.00:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 1,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "Move File From NEW to OLD Location"
+      }
+    ],
+    "start": "2017-10-25T00:00:00Z",
+    "end": "2017-10-25T23:59:59Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

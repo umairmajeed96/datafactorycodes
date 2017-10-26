@@ -1,0 +1,778 @@
+{
+  "name": "VADSUnifReadCUSTTABLE",
+  "properties": {
+    "structure": [
+      {
+        "name": "ACCOUNTNUM",
+        "type": "String"
+      },
+      {
+        "name": "INVOICEACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "CUSTGROUP",
+        "type": "String"
+      },
+      {
+        "name": "LINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "PAYMTERMID",
+        "type": "String"
+      },
+      {
+        "name": "CASHDISC",
+        "type": "String"
+      },
+      {
+        "name": "CURRENCY",
+        "type": "String"
+      },
+      {
+        "name": "IntERCOMPANYAUTOCREATEORDERS",
+        "type": "Int64"
+      },
+      {
+        "name": "SALESGROUP",
+        "type": "String"
+      },
+      {
+        "name": "BLOCKED",
+        "type": "Int64"
+      },
+      {
+        "name": "ONETIMECUSTOMER",
+        "type": "Int64"
+      },
+      {
+        "name": "ACCOUNTSTATEMENT",
+        "type": "Int64"
+      },
+      {
+        "name": "CREDITMAX",
+        "type": "Decimal"
+      },
+      {
+        "name": "MANDATORYCREDITLIMIT",
+        "type": "Int64"
+      },
+      {
+        "name": "VENDACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "PRICEGROUP",
+        "type": "String"
+      },
+      {
+        "name": "MULTILINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "ENDDISC",
+        "type": "String"
+      },
+      {
+        "name": "VATNUM",
+        "type": "String"
+      },
+      {
+        "name": "INVENTLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "DLVTERM",
+        "type": "String"
+      },
+      {
+        "name": "DLVMODE",
+        "type": "String"
+      },
+      {
+        "name": "MARKUPGROUP",
+        "type": "String"
+      },
+      {
+        "name": "CLEARINGPERIOD",
+        "type": "String"
+      },
+      {
+        "name": "FREIGHTZONE",
+        "type": "String"
+      },
+      {
+        "name": "CREDITRATING",
+        "type": "String"
+      },
+      {
+        "name": "TAXGROUP",
+        "type": "String"
+      },
+      {
+        "name": "STATISTICSGROUP",
+        "type": "String"
+      },
+      {
+        "name": "PAYMMODE",
+        "type": "String"
+      },
+      {
+        "name": "COMMISSIONGROUP",
+        "type": "String"
+      },
+      {
+        "name": "BANKACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "PAYMSCHED",
+        "type": "String"
+      },
+      {
+        "name": "CONTACTPERSONID",
+        "type": "String"
+      },
+      {
+        "name": "INVOICEADDRESS",
+        "type": "Int64"
+      },
+      {
+        "name": "OURACCOUNTNUM",
+        "type": "String"
+      },
+      {
+        "name": "SALESPOOLID",
+        "type": "String"
+      },
+      {
+        "name": "INCLTAX",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "NUMBERSEQUENCEGROUP",
+        "type": "String"
+      },
+      {
+        "name": "PAYMDAYID",
+        "type": "String"
+      },
+      {
+        "name": "LINEOFBUSINESSID",
+        "type": "String"
+      },
+      {
+        "name": "DESTINATIONCODEID",
+        "type": "String"
+      },
+      {
+        "name": "GIROTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "SUPPITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "GIROTYPEIntERESTNOTE",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXLICENSENUM",
+        "type": "String"
+      },
+      {
+        "name": "WEBSALESORDERDISPLAY",
+        "type": "Int64"
+      },
+      {
+        "name": "PAYMSPEC",
+        "type": "String"
+      },
+      {
+        "name": "BANKCENTRALBANKPURPOSETEXT",
+        "type": "String"
+      },
+      {
+        "name": "BANKCENTRALBANKPURPOSECODE",
+        "type": "String"
+      },
+      {
+        "name": "IntERCOMPANYALLOWINDIRECTCREATION",
+        "type": "Int64"
+      },
+      {
+        "name": "PACKMATERIALFEELICENSENUM",
+        "type": "String"
+      },
+      {
+        "name": "TAXBORDERNUMBER_FI",
+        "type": "String"
+      },
+      {
+        "name": "EINVOICEEANNUM",
+        "type": "String"
+      },
+      {
+        "name": "FISCALCODE",
+        "type": "String"
+      },
+      {
+        "name": "DLVREASON",
+        "type": "String"
+      },
+      {
+        "name": "FORECASTDMPINCLUDE",
+        "type": "Int64"
+      },
+      {
+        "name": "GIROTYPECOLLECTIONLETTER",
+        "type": "Int64"
+      },
+      {
+        "name": "SALESCALENDARID",
+        "type": "String"
+      },
+      {
+        "name": "CUSTCLASSIFICATIONID",
+        "type": "String"
+      },
+      {
+        "name": "IntERCOMPANYDIRECTDELIVERY",
+        "type": "Int64"
+      },
+      {
+        "name": "ENTERPRISENUMBER",
+        "type": "String"
+      },
+      {
+        "name": "SHIPCARRIERACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "GIROTYPEPROJINVOICE",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTSITEID",
+        "type": "String"
+      },
+      {
+        "name": "ORDERENTRYDEADLINEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "SHIPCARRIERID",
+        "type": "String"
+      },
+      {
+        "name": "SHIPCARRIERFUELSURCHARGE",
+        "type": "Int64"
+      },
+      {
+        "name": "SHIPCARRIERBLINDSHIPMENT",
+        "type": "Int64"
+      },
+      {
+        "name": "SHIPCARRIERACCOUNTCODE",
+        "type": "String"
+      },
+      {
+        "name": "GIROTYPEFREETEXTINVOICE",
+        "type": "Int64"
+      },
+      {
+        "name": "SYNCENTITYID",
+        "type": "String"
+      },
+      {
+        "name": "SYNCVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "MEMO",
+        "type": "String"
+      },
+      {
+        "name": "SALESDISTRICTID",
+        "type": "String"
+      },
+      {
+        "name": "SEGMENTID",
+        "type": "String"
+      },
+      {
+        "name": "SUBSEGMENTID",
+        "type": "String"
+      },
+      {
+        "name": "RFIDITEMTAGGING",
+        "type": "Int64"
+      },
+      {
+        "name": "RFIDCASETAGGING",
+        "type": "Int64"
+      },
+      {
+        "name": "RFIDPALLETTAGGING",
+        "type": "Int64"
+      },
+      {
+        "name": "COMPANYCHAINID",
+        "type": "String"
+      },
+      {
+        "name": "COMPANYIDSIRET",
+        "type": "String"
+      },
+      {
+        "name": "PARTY",
+        "type": "Int64"
+      },
+      {
+        "name": "IDENTIFICATIONNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "PARTYCOUNTRY",
+        "type": "String"
+      },
+      {
+        "name": "PARTYSTATE",
+        "type": "String"
+      },
+      {
+        "name": "ORGID",
+        "type": "String"
+      },
+      {
+        "name": "PAYMIDTYPE",
+        "type": "String"
+      },
+      {
+        "name": "FACTORINGACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTDIMENSION",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTEXCLUDECOLLECTIONFEE",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTEXCLUDEIntERESTCHARGES",
+        "type": "Int64"
+      },
+      {
+        "name": "COMPANYNAFCODE",
+        "type": "Int64"
+      },
+      {
+        "name": "BANKCUSTPAYMIDTABLE",
+        "type": "Int64"
+      },
+      {
+        "name": "GIROTYPEACCOUNTSTATEMENT",
+        "type": "Int64"
+      },
+      {
+        "name": "MAINCONTACTWORKER",
+        "type": "Int64"
+      },
+      {
+        "name": "CREDITCARDADDRESSVERIFICATION",
+        "type": "Int64"
+      },
+      {
+        "name": "CREDITCARDCVC",
+        "type": "Int64"
+      },
+      {
+        "name": "CREDITCARDADDRESSVERIFICATIONVOID",
+        "type": "Int64"
+      },
+      {
+        "name": "CREDITCARDADDRESSVERIFICATIONLEVEL",
+        "type": "Int64"
+      },
+      {
+        "name": "COMPANYTYPE_MX",
+        "type": "Int64"
+      },
+      {
+        "name": "RFC_MX",
+        "type": "String"
+      },
+      {
+        "name": "CURP_MX",
+        "type": "String"
+      },
+      {
+        "name": "STATEINSCRIPTION_MX",
+        "type": "String"
+      },
+      {
+        "name": "RESIDENCEFOREIGNCOUNTRYREGIONID_IT",
+        "type": "String"
+      },
+      {
+        "name": "BIRTHCOUNTYCODE_IT",
+        "type": "String"
+      },
+      {
+        "name": "BIRTHDATE_IT",
+        "type": "Datetime"
+      },
+      {
+        "name": "BIRTHPLACE_IT",
+        "type": "String"
+      },
+      {
+        "name": "EINVOICE",
+        "type": "Int64"
+      },
+      {
+        "name": "CCMNUM_BR",
+        "type": "String"
+      },
+      {
+        "name": "CNPJCPFNUM_BR",
+        "type": "String"
+      },
+      {
+        "name": "PBACUSTGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "IENUM_BR",
+        "type": "String"
+      },
+      {
+        "name": "SUFRAMANUMBER_BR",
+        "type": "String"
+      },
+      {
+        "name": "SUFRAMA_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTFINALUSER_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "IntERESTCODE_BR",
+        "type": "String"
+      },
+      {
+        "name": "FINECODE_BR",
+        "type": "String"
+      },
+      {
+        "name": "SUFRAMAPISCOFINS_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXWITHHOLDCALCULATE_TH",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXWITHHOLDGROUP_TH",
+        "type": "String"
+      },
+      {
+        "name": "CONSDAY_JP",
+        "type": "Int64"
+      },
+      {
+        "name": "NIT_BR",
+        "type": "String"
+      },
+      {
+        "name": "INSSCEI_BR",
+        "type": "String"
+      },
+      {
+        "name": "CNAE_BR",
+        "type": "String"
+      },
+      {
+        "name": "ICMSCONTRIBUTOR_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "SERVICECODEONDLVADDRESS_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTPROFILETYPE_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTPROFILEID_RU",
+        "type": "String"
+      },
+      {
+        "name": "TAXWITHHOLDCALCULATE_IN",
+        "type": "Int64"
+      },
+      {
+        "name": "UNITEDVATINVOICE_LT",
+        "type": "Int64"
+      },
+      {
+        "name": "ENTERPRISECODE",
+        "type": "String"
+      },
+      {
+        "name": "COMMERCIALREGISTERSECTION",
+        "type": "String"
+      },
+      {
+        "name": "COMMERCIALREGISTERINSETNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "COMMERCIALREGISTER",
+        "type": "String"
+      },
+      {
+        "name": "REGNUM_W",
+        "type": "String"
+      },
+      {
+        "name": "ISRESIDENT_LV",
+        "type": "Int64"
+      },
+      {
+        "name": "IntBANK_LV",
+        "type": "String"
+      },
+      {
+        "name": "PAYMENTREFERENCE_EE",
+        "type": "String"
+      },
+      {
+        "name": "PACKAGEDEPOSITEXCEMPT_PL",
+        "type": "Int64"
+      },
+      {
+        "name": "FEDNONFEDINDICATOR",
+        "type": "Int64"
+      },
+      {
+        "name": "IRS1099CINDICATOR",
+        "type": "Int64"
+      },
+      {
+        "name": "AGENCYLOCATIONCODE",
+        "type": "String"
+      },
+      {
+        "name": "FEDERALCOMMENTS",
+        "type": "String"
+      },
+      {
+        "name": "USEPURCHREQUEST",
+        "type": "Int64"
+      },
+      {
+        "name": "MCRMERGEDPARENT",
+        "type": "String"
+      },
+      {
+        "name": "MCRMERGEDROOT",
+        "type": "String"
+      },
+      {
+        "name": "AFFILIATED_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "CASHDISCBASEDAYS",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTTRADINGPARTNERCODE",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTWHTCONTRIBUTIONTYPE_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "DAXIntEGRATIONID",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTDIRECTDEBITMANDATE",
+        "type": "Int64"
+      },
+      {
+        "name": "DEFAULTINVENTSTATUSID",
+        "type": "String"
+      },
+      {
+        "name": "ENTRYCERTIFICATEREQUIRED_W",
+        "type": "Int64"
+      },
+      {
+        "name": "EXPORTSALES_PL",
+        "type": "Int64"
+      },
+      {
+        "name": "EXPRESSBILLOFLADING",
+        "type": "Int64"
+      },
+      {
+        "name": "FISCALDOCTYPE_PL",
+        "type": "Int64"
+      },
+      {
+        "name": "FOREIGNRESIDENT_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "GENERATEINCOMINGFISCALDOCUMENT_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "INVOICEPOSTINGTYPE_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "ISSUEOWNENTRYCERTIFICATE_W",
+        "type": "Int64"
+      },
+      {
+        "name": "ISSUERCOUNTRY_HU",
+        "type": "String"
+      },
+      {
+        "name": "LVPAYMTRANSCODES",
+        "type": "Int64"
+      },
+      {
+        "name": "MANDATORYVATDATE_PL",
+        "type": "Int64"
+      },
+      {
+        "name": "PASSPORTNO_HU",
+        "type": "String"
+      },
+      {
+        "name": "PDSCUSTREBATEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PDSFREIGHTACCRUED",
+        "type": "Int64"
+      },
+      {
+        "name": "PDSREBATETMAGROUP",
+        "type": "String"
+      },
+      {
+        "name": "TAXPERIODPAYMENTCODE_PL",
+        "type": "String"
+      },
+      {
+        "name": "USECASHDISC",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDateTime",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_MODIFIEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "CREATEDDateTime",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_CREATEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "EINVOICEREGISTER_IT",
+        "type": "Int64"
+      },
+      {
+        "name": "FOREIGNERID_BR",
+        "type": "String"
+      },
+      {
+        "name": "AUTHORITYOFFICE_IT",
+        "type": "String"
+      },
+      {
+        "name": "FOREIGNTAXREGISTRATION_MX",
+        "type": "String"
+      },
+      {
+        "name": "PRESENCETYPE_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXGSTRELIEFGROUPHEADING_MY",
+        "type": "Int64"
+      },
+      {
+        "name": "EGXEDI",
+        "type": "Int64"
+      },
+      {
+        "name": "SLBIRTHMONTH",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "CUSTTABLE.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

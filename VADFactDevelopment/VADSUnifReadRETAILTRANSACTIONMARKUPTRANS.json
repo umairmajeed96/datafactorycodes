@@ -1,0 +1,114 @@
+{
+  "name": "VADSUnifReadRETAILTRANSACTIONMARKUPTRANS",
+  "properties": {
+    "structure": [
+      {
+        "name": "CALCULATEDAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "CHANNEL",
+        "type": "Int64"
+      },
+      {
+        "name": "CURRENCYCODE",
+        "type": "String"
+      },
+      {
+        "name": "MARKUPCODE",
+        "type": "String"
+      },
+      {
+        "name": "MARKUPLINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "METHOD",
+        "type": "Int64"
+      },
+      {
+        "name": "ORIGIN",
+        "type": "String"
+      },
+      {
+        "name": "REPLICATIONCOUNTERFROMORIGIN",
+        "type": "Int64"
+      },
+      {
+        "name": "SALELINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "STORE",
+        "type": "String"
+      },
+      {
+        "name": "TAXAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXAMOUNTEXCLUSIVE",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXAMOUNTINCLUSIVE",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXGROUP",
+        "type": "String"
+      },
+      {
+        "name": "TAXITEMGROUP",
+        "type": "String"
+      },
+      {
+        "name": "TERMINALID",
+        "type": "String"
+      },
+      {
+        "name": "TRANSACTIONID",
+        "type": "String"
+      },
+      {
+        "name": "VALUE",
+        "type": "Decimal"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "RETAILTRANSACTIONMARKUPTRANS.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

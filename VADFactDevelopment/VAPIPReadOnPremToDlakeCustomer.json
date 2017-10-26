@@ -1,0 +1,208 @@
+{
+  "name": "VAPIPReadOnPremToDlakeCustomer",
+  "properties": {
+    "description": "Copy Data From onpremises sql to datalake store - Customer information",
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[CUSTTABLE]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadCUSTTABLE"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteCUSTTABLE"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE CUSTTABLE",
+        "description": "Copy CUSTTABLE table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[DIRPARTYTABLE]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadDIRPARTYTABLE"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteDIRPARTYTABLE"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE DIRPARTYTABLE",
+        "description": "Copy DIRPARTYTABLE table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[CREDITCARDCUST]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadCREDITCARDCUST"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteCREDITCARDCUST"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE CREDITCARDCUST",
+        "description": "Copy CREDITCARDCUST table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[LOGISTICSPOSTALADDRESS]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadLOGISTICSPOSTALADDRESS"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteLOGISTICSPOSTALADDRESS"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE LOGISTICSPOSTALADDRESS",
+        "description": "Copy LOGISTICSPOSTALADDRESS table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[LOGISTICSELECTRONICADDRESS]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadLOGISTICSELECTRONICADDRESS"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteLOGISTICSELECTRONICADDRESS"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE LOGISTICSELECTRONICADDRESS",
+        "description": "Copy LOGISTICSELECTRONICADDRESS table to text file"
+      }
+    ],
+    "start": "2017-10-23T00:00:00Z",
+    "end": "2017-10-23T23:59:59Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

@@ -1,0 +1,322 @@
+{
+  "name": "VADSOldTransactions",
+  "properties": {
+    "structure": [
+      {
+        "name": "VAVersion",
+        "type": "Int64"
+      },
+      {
+        "name": "TransactionId",
+        "type": "String"
+      },
+      {
+        "name": "LineId",
+        "type": "Decimal"
+      },
+      {
+        "name": "BusinessUnitKey",
+        "type": "String"
+      },
+      {
+        "name": "CreatedDate",
+        "type": "Datetime"
+      },
+      {
+        "name": "ProductNumber",
+        "type": "String"
+      },
+      {
+        "name": "StoreNumber",
+        "type": "String"
+      },
+      {
+        "name": "CurrencyKey",
+        "type": "String"
+      },
+      {
+        "name": "CustomerKey",
+        "type": "String"
+      },
+      {
+        "name": "DeliveryTypeKey",
+        "type": "String"
+      },
+      {
+        "name": "EmployeeKey",
+        "type": "String"
+      },
+      {
+        "name": "InvoicedDateKey",
+        "type": "String"
+      },
+      {
+        "name": "POSTerminalKey",
+        "type": "String"
+      },
+      {
+        "name": "ReceiptDateKey",
+        "type": "String"
+      },
+      {
+        "name": "ReturnStoreKey",
+        "type": "String"
+      },
+      {
+        "name": "ReturnTerminalKey",
+        "type": "String"
+      },
+      {
+        "name": "PriceOverrideReasonCodeKey",
+        "type": "String"
+      },
+      {
+        "name": "TaxState",
+        "type": "String"
+      },
+      {
+        "name": "ReturnReasonCodeKey",
+        "type": "String"
+      },
+      {
+        "name": "ReturnTransactionID",
+        "type": "String"
+      },
+      {
+        "name": "HeaderDiscountReasonCodeKey",
+        "type": "String"
+      },
+      {
+        "name": "LineDiscountReasonCodeKey",
+        "type": "String"
+      },
+      {
+        "name": "RetailAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "NetSalesAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "NetSalesInclTax",
+        "type": "Decimal"
+      },
+      {
+        "name": "NetSalesInclTaxAndShipping",
+        "type": "Decimal"
+      },
+      {
+        "name": "NetQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "UnitQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "UnitCost",
+        "type": "Decimal"
+      },
+      {
+        "name": "UnitRetailPrice",
+        "type": "Decimal"
+      },
+      {
+        "name": "GrossMarginAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "GrossSalesAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "ItemPrice",
+        "type": "Decimal"
+      },
+      {
+        "name": "ItemStandardCost",
+        "type": "Decimal"
+      },
+      {
+        "name": "ItemPriceCharges",
+        "type": "Decimal"
+      },
+      {
+        "name": "BonusCouponNonNetAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "BonusCouponNonNetQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "CancelAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "CancelQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "DiscountNonNetAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "DiscountNonNetQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "DiscountQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "DiscountedTransInd",
+        "type": "String"
+      },
+      {
+        "name": "PromoAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "ReturnedTransInd",
+        "type": "String"
+      },
+      {
+        "name": "ReturnAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "ReturnQuantity",
+        "type": "String"
+      },
+      {
+        "name": "StoreCouponAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "StoreCouponQuantity",
+        "type": "String"
+      },
+      {
+        "name": "ReceiptNumber",
+        "type": "String"
+      },
+      {
+        "name": "SalesOrderNumber",
+        "type": "String"
+      },
+      {
+        "name": "SalesStatusKey",
+        "type": "String"
+      },
+      {
+        "name": "SalesTypeKey",
+        "type": "String"
+      },
+      {
+        "name": "TransactionStatusKey",
+        "type": "String"
+      },
+      {
+        "name": "TransactionTypeKey",
+        "type": "String"
+      },
+      {
+        "name": "VendorCouponNonNetAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "VendorCouponNonNetQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "VoidSalesAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "VoidSalesQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "TaxAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "TotalDiscountAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "ConfiguredDiscountAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "CustomerQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "HeaderDiscountAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "LineDiscountAmount",
+        "type": "Decimal"
+      },
+      {
+        "name": "ItemKeydQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "ItemScanedQuantity",
+        "type": "Decimal"
+      },
+      {
+        "name": "PickUpDate",
+        "type": "Datetime"
+      },
+      {
+        "name": "ExtCost",
+        "type": "Decimal"
+      },
+      {
+        "name": "ShippingCost",
+        "type": "Decimal"
+      },
+      {
+        "name": "activeInd",
+        "type": "String"
+      },
+      {
+        "name": "SourceSystem",
+        "type": "String"
+      },
+      {
+        "name": "SourceCreatedDateTime",
+        "type": "String"
+      },
+      {
+        "name": "SourceModifiedDateTime",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "Transactions.Csv",
+      "folderPath": "VAUnifiedmodel/Transactions/OLD",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": false,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

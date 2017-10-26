@@ -1,0 +1,74 @@
+{
+  "name": "VADSUnifReadRetailSeasonTable",
+  "properties": {
+    "structure": [
+      {
+        "name": "SEASONCODE",
+        "type": "String"
+      },
+      {
+        "name": "DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "ENDDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "STARTDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int32"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "PLMSEASONTYPE",
+        "type": "String"
+      },
+      {
+        "name": "PLMYEAR",
+        "type": "Datetime"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "RetailSeasonTable.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

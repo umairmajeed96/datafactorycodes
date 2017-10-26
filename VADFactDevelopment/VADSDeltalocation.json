@@ -1,0 +1,22 @@
+{
+  "name": "VADSDeltalocation",
+  "properties": {
+    "published": false,
+    "type": "AzureBlob",
+    "linkedServiceName": "VALnkBlobStorage",
+    "typeProperties": {
+      "fileName": "location.Csv",
+      "folderPath": "/locationdelta",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

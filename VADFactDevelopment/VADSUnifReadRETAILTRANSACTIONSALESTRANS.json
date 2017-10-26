@@ -1,0 +1,538 @@
+{
+  "name": "VADSUnifReadRETAILTRANSACTIONSALESTRANS",
+  "properties": {
+    "structure": [
+      {
+        "name": "CURRENCY",
+        "type": "String"
+      },
+      {
+        "name": "TRANSACTIONID",
+        "type": "String"
+      },
+      {
+        "name": "LINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "RECEIPTID",
+        "type": "String"
+      },
+      {
+        "name": "BARCODE",
+        "type": "String"
+      },
+      {
+        "name": "ITEMID",
+        "type": "String"
+      },
+      {
+        "name": "PRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "NETPRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "QTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXGROUP",
+        "type": "String"
+      },
+      {
+        "name": "TRANSACTIONSTATUS",
+        "type": "Int64"
+      },
+      {
+        "name": "DISCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "COSTAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TRANSDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "TRANSTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "SHIFT",
+        "type": "String"
+      },
+      {
+        "name": "SHIFTDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "NETAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "DISCOFFERID",
+        "type": "String"
+      },
+      {
+        "name": "STDNETPRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "DISCAMOUNTFROMSTDPRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "STATEMENTID",
+        "type": "String"
+      },
+      {
+        "name": "CUSTACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "SECTION",
+        "type": "String"
+      },
+      {
+        "name": "SHELF",
+        "type": "String"
+      },
+      {
+        "name": "STATEMENTCODE",
+        "type": "String"
+      },
+      {
+        "name": "DISCGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "TRANSACTIONCODE",
+        "type": "Int64"
+      },
+      {
+        "name": "STORE",
+        "type": "String"
+      },
+      {
+        "name": "ITEMIDSCANNED",
+        "type": "Int64"
+      },
+      {
+        "name": "KEYBOARDITEMENTRY",
+        "type": "Int64"
+      },
+      {
+        "name": "PRICEINBARCODE",
+        "type": "Int64"
+      },
+      {
+        "name": "PRICECHANGE",
+        "type": "Int64"
+      },
+      {
+        "name": "WEIGHTMANUALLYENTERED",
+        "type": "Int64"
+      },
+      {
+        "name": "LINEWASDISCOUNTED",
+        "type": "Int64"
+      },
+      {
+        "name": "SCALEITEM",
+        "type": "Int64"
+      },
+      {
+        "name": "WEIGHTITEM",
+        "type": "Int64"
+      },
+      {
+        "name": "RETURNNOSALE",
+        "type": "Int64"
+      },
+      {
+        "name": "ITEMCORRECTEDLINE",
+        "type": "Int64"
+      },
+      {
+        "name": "LINKEDITEMNOTORIGINAL",
+        "type": "Int64"
+      },
+      {
+        "name": "ORIGINALOFLINKEDITEMLIST",
+        "type": "Int64"
+      },
+      {
+        "name": "TERMINALID",
+        "type": "String"
+      },
+      {
+        "name": "ITEMPOSTINGGROUP",
+        "type": "String"
+      },
+      {
+        "name": "TOTALROUNDEDAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "COUNTER",
+        "type": "Int64"
+      },
+      {
+        "name": "VARIANTID",
+        "type": "String"
+      },
+      {
+        "name": "LINEDSCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "REPLICATED",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTDISCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INFOCODEDISCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "CUSTINVOICEDISCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "UNIT",
+        "type": "String"
+      },
+      {
+        "name": "UNITQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "UNITPRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "TOTALDISCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TOTALDISCPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TOTALDISCINFOCODELINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "PERIODICDISCTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "PERIODICDISCAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "DISCOUNTAMOUNTFORPRInt64ING",
+        "type": "Decimal"
+      },
+      {
+        "name": "STAFFID",
+        "type": "String"
+      },
+      {
+        "name": "PERIODICDISCGROUP",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTRANSID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTDIMID",
+        "type": "String"
+      },
+      {
+        "name": "PURCHID",
+        "type": "String"
+      },
+      {
+        "name": "FILELOGID",
+        "type": "String"
+      },
+      {
+        "name": "CONCESSIONCONTRACTID",
+        "type": "String"
+      },
+      {
+        "name": "CONCESSIONSETTLEMENTID",
+        "type": "String"
+      },
+      {
+        "name": "REPLICATIONCOUNTERFROMORIGIN",
+        "type": "Int64"
+      },
+      {
+        "name": "CONSESSIONPARTPAYMENTID",
+        "type": "String"
+      },
+      {
+        "name": "PRESCRIPTIONID",
+        "type": "String"
+      },
+      {
+        "name": "COMMENT_",
+        "type": "String"
+      },
+      {
+        "name": "PUMPID",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTSTATUSSALES",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTBATCHID",
+        "type": "String"
+      },
+      {
+        "name": "GIFTCARD",
+        "type": "Int64"
+      },
+      {
+        "name": "RFIDTAGID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTSERIALID",
+        "type": "String"
+      },
+      {
+        "name": "RETURNTRANSACTIONID",
+        "type": "String"
+      },
+      {
+        "name": "RETURNQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXITEMGROUP",
+        "type": "String"
+      },
+      {
+        "name": "ORIGINALTAXGROUP",
+        "type": "String"
+      },
+      {
+        "name": "ORIGINALTAXITEMGROUP",
+        "type": "String"
+      },
+      {
+        "name": "NETAMOUNTINCLTAX",
+        "type": "Decimal"
+      },
+      {
+        "name": "BLOCKQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "BUSINESSDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "CATALOG",
+        "type": "Int64"
+      },
+      {
+        "name": "CATEGORYID",
+        "type": "Int64"
+      },
+      {
+        "name": "CHANNEL",
+        "type": "Int64"
+      },
+      {
+        "name": "DEFAULTDIMENSION",
+        "type": "Int64"
+      },
+      {
+        "name": "DLVMODE",
+        "type": "String"
+      },
+      {
+        "name": "ELECTRONICDELIVERYEMAIL",
+        "type": "String"
+      },
+      {
+        "name": "ELECTRONICDELIVERYEMAILCONTENT",
+        "type": "String"
+      },
+      {
+        "name": "INVENTLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTSITEID",
+        "type": "String"
+      },
+      {
+        "name": "LINEMANUALDISCOUNTAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "LINEMANUALDISCOUNTPERCENTAGE",
+        "type": "Decimal"
+      },
+      {
+        "name": "LISTINGID",
+        "type": "String"
+      },
+      {
+        "name": "LOGISTICSPOSTALADDRESS",
+        "type": "Int64"
+      },
+      {
+        "name": "LOYALTYDISCAMOUNT_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "LOYALTYDISCPCT_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "ORIGIN",
+        "type": "String"
+      },
+      {
+        "name": "ORIGINALPRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "PERIODICPERCENTAGEDISCOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "RECEIPTDATEREQUESTED",
+        "type": "Datetime"
+      },
+      {
+        "name": "RETURNLINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "RETURNSTORE",
+        "type": "String"
+      },
+      {
+        "name": "RETURNTERMINALID",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPINGDATEREQUESTED",
+        "type": "Datetime"
+      },
+      {
+        "name": "SKIPSALESLINE_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDatetime",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_MODIFIEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "MODIFIEDTRANSACTIONID",
+        "type": "Int64"
+      },
+      {
+        "name": "CREATEDDatetime",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_CREATEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "String"
+      },
+      {
+        "name": "CREATEDTRANSACTIONID",
+        "type": "Int64"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "SALESASSOCIATE",
+        "type": "String"
+      },
+      {
+        "name": "VSIFINALSALES",
+        "type": "Int64"
+      },
+      {
+        "name": "VSIFONT",
+        "type": "String"
+      },
+      {
+        "name": "VSIINITIALS",
+        "type": "String"
+      },
+      {
+        "name": "VSITHREADCOLOR",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "RETAILTRANSACTIONSALESTRANS.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

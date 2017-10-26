@@ -1,0 +1,342 @@
+@newprd= 
+EXTRACT 
+vaversion string,
+businessunitkey string,
+itemnumber string,
+itemdescription string,
+itemlongdescription string,
+itemhirarchylevl1 string,
+itemhirarchylevel2 string,
+itemhirarchylevel3 string,
+itemhirarchylevel4 string,
+brandid string,
+branddescription string,
+itemtypegroupcode string,
+itemtypegroupdesc string,
+countryoforigin string,
+targetcountry string,
+discontinueddate string,
+barcodetype string,
+itembarcode string,
+primaryupc string,
+upc string,
+nonprofitind string,
+taxind string,
+scantypeid string,
+scantypedescription string,
+seasonname string,
+sesondescription string,
+seasonstartdate string,
+seasonenddate string,
+seasontype string,
+seasonyear string,
+variantname string,
+color string,
+size string,
+volume string,
+dimensions string,
+weight string,
+produtgender string,
+productfabric string,
+productfabricpattern string,
+productheeltype string,
+productdresstype string,
+productfabricgroup string,
+productcontents string,
+productfit string,
+cutups string,
+jeanstye string,
+bodylength string,
+fabriccare string,
+sleevelength string,
+sleevetype string,
+lengthtype string,
+silhouette string,
+currentcost string,
+currentretailprice string,
+commodity string,
+primaryvendor string,
+pricingmethod string,
+pricemasterid string,
+pricemasterdescription string,
+activeind string,
+sourcesystem string,
+sourcecreateddatetime string,
+sourcemodifieddatetime string
+FROM @newprd_file
+USING Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+IF (FILE.EXISTS(@oldprd_file))
+THEN
+@oldprd= 
+EXTRACT 
+vaversion string,
+businessunitkey string,
+itemnumber string,
+itemdescription string,
+itemlongdescription string,
+itemhirarchylevl1 string,
+itemhirarchylevel2 string,
+itemhirarchylevel3 string,
+itemhirarchylevel4 string,
+brandid string,
+branddescription string,
+itemtypegroupcode string,
+itemtypegroupdesc string,
+countryoforigin string,
+targetcountry string,
+discontinueddate string,
+barcodetype string,
+itembarcode string,
+primaryupc string,
+upc string,
+nonprofitind string,
+taxind string,
+scantypeid string,
+scantypedescription string,
+seasonname string,
+sesondescription string,
+seasonstartdate string,
+seasonenddate string,
+seasontype string,
+seasonyear string,
+variantname string,
+color string,
+size string,
+volume string,
+dimensions string,
+weight string,
+produtgender string,
+productfabric string,
+productfabricpattern string,
+productheeltype string,
+productdresstype string,
+productfabricgroup string,
+productcontents string,
+productfit string,
+cutups string,
+jeanstye string,
+bodylength string,
+fabriccare string,
+sleevelength string,
+sleevetype string,
+lengthtype string,
+silhouette string,
+currentcost string,
+currentretailprice string,
+commodity string,
+primaryvendor string,
+pricingmethod string,
+pricemasterid string,
+pricemasterdescription string,
+activeind string,
+sourcesystem string,
+sourcecreateddatetime string,
+sourcemodifieddatetime string
+FROM @oldprd_file
+USING Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+@deltaprd= SELECT 
+np.vaversion,
+np.businessunitkey,
+np.itemnumber,
+np.itemdescription,
+np.itemlongdescription,
+np.itemhirarchylevl1,
+np.itemhirarchylevel2,
+np.itemhirarchylevel3,
+np.itemhirarchylevel4,
+np.brandid,
+np.branddescription,
+np.itemtypegroupcode,
+np.itemtypegroupdesc,
+np.countryoforigin,
+np.targetcountry,
+np.discontinueddate,
+np.barcodetype,
+np.itembarcode,
+np.primaryupc,
+np.upc,
+np.nonprofitind,
+np.taxind,
+np.scantypeid,
+np.scantypedescription,
+np.seasonname,
+np.sesondescription,
+np.seasonstartdate,
+np.seasonenddate,
+np.seasontype,
+np.seasonyear,
+np.variantname,
+np.color,
+np.size,
+np.volume,
+np.dimensions,
+np.weight,
+np.produtgender,
+np.productfabric,
+np.productfabricpattern,
+np.productheeltype,
+np.productdresstype,
+np.productfabricgroup,
+np.productcontents,
+np.productfit,
+np.cutups,
+np.jeanstye,
+np.bodylength,
+np.fabriccare,
+np.sleevelength,
+np.sleevetype,
+np.lengthtype,
+np.silhouette,
+np.currentcost,
+np.currentretailprice,
+np.commodity,
+np.primaryvendor,
+np.pricingmethod,
+np.pricemasterid,
+np.pricemasterdescription,
+np.activeind,
+np.sourcesystem,
+np.sourcecreateddatetime,
+np.sourcemodifieddatetime
+FROM @newprd AS np
+LEFT JOIN @oldprd AS op  ON  np.vaversion == op.vaversion
+AND np.businessunitkey == op.businessunitkey
+AND np.itemnumber == op.itemnumber
+AND np.itemdescription == op.itemdescription
+AND np.itemlongdescription == op.itemlongdescription
+AND np.itemhirarchylevl1 == op.itemhirarchylevl1
+AND np.itemhirarchylevel2 == op.itemhirarchylevel2
+AND np.itemhirarchylevel3 == op.itemhirarchylevel3
+AND np.itemhirarchylevel4 == op.itemhirarchylevel4
+AND np.brandid == op.brandid
+AND np.branddescription == op.branddescription
+AND np.itemtypegroupcode == op.itemtypegroupcode
+AND np.itemtypegroupdesc == op.itemtypegroupdesc
+AND np.countryoforigin == op.countryoforigin
+AND np.targetcountry == op.targetcountry
+AND np.discontinueddate == op.discontinueddate
+AND np.barcodetype == op.barcodetype
+AND np.itembarcode == op.itembarcode
+AND np.primaryupc == op.primaryupc
+AND np.upc == op.upc
+AND np.nonprofitind == op.nonprofitind
+AND np.taxind == op.taxind
+AND np.scantypeid == op.scantypeid
+AND np.scantypedescription == op.scantypedescription
+AND np.seasonname == op.seasonname
+AND np.sesondescription == op.sesondescription
+AND np.seasonstartdate == op.seasonstartdate
+AND np.seasonenddate == op.seasonenddate
+AND np.seasontype == op.seasontype
+AND np.seasonyear == op.seasonyear
+AND np.variantname == op.variantname
+AND np.color == op.color
+AND np.size == op.size
+AND np.volume == op.volume
+AND np.dimensions == op.dimensions
+AND np.weight == op.weight
+AND np.produtgender == op.produtgender
+AND np.productfabric == op.productfabric
+AND np.productfabricpattern == op.productfabricpattern
+AND np.productheeltype == op.productheeltype
+AND np.productdresstype == op.productdresstype
+AND np.productfabricgroup == op.productfabricgroup
+AND np.productcontents == op.productcontents
+AND np.productfit == op.productfit
+AND np.cutups == op.cutups
+AND np.jeanstye == op.jeanstye
+AND np.bodylength == op.bodylength
+AND np.fabriccare == op.fabriccare
+AND np.sleevelength == op.sleevelength
+AND np.sleevetype == op.sleevetype
+AND np.lengthtype == op.lengthtype
+AND np.silhouette == op.silhouette
+AND np.currentcost == op.currentcost
+AND np.currentretailprice == op.currentretailprice
+AND np.commodity == op.commodity
+AND np.primaryvendor == op.primaryvendor
+AND np.pricingmethod == op.pricingmethod
+AND np.pricemasterid == op.pricemasterid
+AND np.pricemasterdescription == op.pricemasterdescription
+AND np.activeind == op.activeind
+AND np.sourcesystem == op.sourcesystem
+AND np.sourcecreateddatetime == op.sourcecreateddatetime
+AND np.sourcemodifieddatetime == op.sourcemodifieddatetime
+WHERE op.vaversion IS NULL;
+
+ELSE 
+
+@deltaprd= SELECT 
+np.vaversion,
+np.businessunitkey,
+np.itemnumber,
+np.itemdescription,
+np.itemlongdescription,
+np.itemhirarchylevl1,
+np.itemhirarchylevel2,
+np.itemhirarchylevel3,
+np.itemhirarchylevel4,
+np.brandid,
+np.branddescription,
+np.itemtypegroupcode,
+np.itemtypegroupdesc,
+np.countryoforigin,
+np.targetcountry,
+np.discontinueddate,
+np.barcodetype,
+np.itembarcode,
+np.primaryupc,
+np.upc,
+np.nonprofitind,
+np.taxind,
+np.scantypeid,
+np.scantypedescription,
+np.seasonname,
+np.sesondescription,
+np.seasonstartdate,
+np.seasonenddate,
+np.seasontype,
+np.seasonyear,
+np.variantname,
+np.color,
+np.size,
+np.volume,
+np.dimensions,
+np.weight,
+np.produtgender,
+np.productfabric,
+np.productfabricpattern,
+np.productheeltype,
+np.productdresstype,
+np.productfabricgroup,
+np.productcontents,
+np.productfit,
+np.cutups,
+np.jeanstye,
+np.bodylength,
+np.fabriccare,
+np.sleevelength,
+np.sleevetype,
+np.lengthtype,
+np.silhouette,
+np.currentcost,
+np.currentretailprice,
+np.commodity,
+np.primaryvendor,
+np.pricingmethod,
+np.pricemasterid,
+np.pricemasterdescription,
+np.activeind,
+np.sourcesystem,
+np.sourcecreateddatetime,
+np.sourcemodifieddatetime
+FROM @newprd AS np;
+
+END;
+
+OUTPUT @deltaprd
+    TO @product
+    USING Outputters.Csv(outputHeader: true);
+

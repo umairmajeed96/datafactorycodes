@@ -1,0 +1,1342 @@
+{
+  "name": "VADSUnifReadDMFProductEntity",
+  "properties": {
+    "structure": [
+      {
+        "name": "ABCCONTRIBUTIONMARGIN",
+        "type": "String"
+      },
+      {
+        "name": "ABCREVENUE",
+        "type": "String"
+      },
+      {
+        "name": "ABCTIEUP",
+        "type": "String"
+      },
+      {
+        "name": "ABCVALUE",
+        "type": "String"
+      },
+      {
+        "name": "ALTCONFIGID",
+        "type": "String"
+      },
+      {
+        "name": "ALTINVENTCOLORID",
+        "type": "String"
+      },
+      {
+        "name": "ALTINVENTSIZEID",
+        "type": "String"
+      },
+      {
+        "name": "ALTINVENTSTYLEID",
+        "type": "String"
+      },
+      {
+        "name": "ALTITEMID",
+        "type": "String"
+      },
+      {
+        "name": "ASSETGROUPID_RU",
+        "type": "String"
+      },
+      {
+        "name": "ASSETID_RU",
+        "type": "String"
+      },
+      {
+        "name": "AUTOREPORTFINISHED",
+        "type": "String"
+      },
+      {
+        "name": "AXMDMCODE",
+        "type": "String"
+      },
+      {
+        "name": "BARCODESETUPID",
+        "type": "String"
+      },
+      {
+        "name": "BASECOMPARISONUNITCODE",
+        "type": "String"
+      },
+      {
+        "name": "BATCHNUMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "BLOCKEDONPOS",
+        "type": "String"
+      },
+      {
+        "name": "BOMCALCGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "BOMLEVEL",
+        "type": "Int32"
+      },
+      {
+        "name": "BOMMANUALRECEIPT",
+        "type": "String"
+      },
+      {
+        "name": "BOMUNITID",
+        "type": "String"
+      },
+      {
+        "name": "COMMISSIONGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "COSTGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "COSTMODEL",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMSTARIFFCODETABLE_IN_DIR_EXP",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMSTARIFFCODETABLE_IN_DIR_IMP",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMSTARIFFCODETABLE_IN_TARIFFCODE_EXP",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMSTARIFFCODETABLE_IN_TARIFFCODE_IMP",
+        "type": "String"
+      },
+      {
+        "name": "CUSTVENDEXTERNALITEM_ABCCATEGORY",
+        "type": "String"
+      },
+      {
+        "name": "CUSTVENDEXTERNALITEM_CUSTVENDRELATION",
+        "type": "String"
+      },
+      {
+        "name": "CUSTVENDEXTERNALITEM_DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "CUSTVENDEXTERNALITEM_EXTERNALITEMID",
+        "type": "String"
+      },
+      {
+        "name": "CUSTVENDEXTERNALITEM_EXTERNALITEMTXT",
+        "type": "String"
+      },
+      {
+        "name": "CUSTVENDEXTERNALITEM_MODULETYPE",
+        "type": "String"
+      },
+      {
+        "name": "DATEBLOCKED",
+        "type": "Datetime"
+      },
+      {
+        "name": "DATETOACTIVATEITEM",
+        "type": "Datetime"
+      },
+      {
+        "name": "DATETOBEBLOCKED",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEFAULTDIMENSION",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTORDERTYPE",
+        "type": "String"
+      },
+      {
+        "name": "DEFINITIONGROUP",
+        "type": "String"
+      },
+      {
+        "name": "DENSITY",
+        "type": "Decimal"
+      },
+      {
+        "name": "DEPTH",
+        "type": "Decimal"
+      },
+      {
+        "name": "DISPLAYPRODUCTNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTDIMENSIONGROUP_NAME",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTTRANSLATION_DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTTRANSLATION_LANGUAGEID",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTTRANSLATION_NAME",
+        "type": "String"
+      },
+      {
+        "name": "ECORESSTORAGEDIMENSIONGROUP_NAME",
+        "type": "String"
+      },
+      {
+        "name": "ECORESTRACKINGDIMENSIONGROUP_NAME",
+        "type": "String"
+      },
+      {
+        "name": "EPCMANAGER",
+        "type": "Decimal"
+      },
+      {
+        "name": "EXCEPTIONCODE_BR",
+        "type": "String"
+      },
+      {
+        "name": "EXCISETARIFFCODES_IN_TARIFFCODE",
+        "type": "String"
+      },
+      {
+        "name": "EXECUTIONID",
+        "type": "String"
+      },
+      {
+        "name": "EXIMPRODUCTGROUPTABLE_IN_PRODUCTGROUP",
+        "type": "String"
+      },
+      {
+        "name": "FISCALLIFOAVOIDCALC",
+        "type": "String"
+      },
+      {
+        "name": "FISCALLIFONORMALVALUE",
+        "type": "Decimal"
+      },
+      {
+        "name": "FISCALLIFONORMALVALUECALC",
+        "type": "String"
+      },
+      {
+        "name": "FITAXATIONORIGIN_BR",
+        "type": "String"
+      },
+      {
+        "name": "FORECASTDMPINCLUDE",
+        "type": "String"
+      },
+      {
+        "name": "GROSSDEPTH",
+        "type": "Decimal"
+      },
+      {
+        "name": "GROSSHEIGHT",
+        "type": "Decimal"
+      },
+      {
+        "name": "GROSSWIDTH",
+        "type": "Decimal"
+      },
+      {
+        "name": "GROUPID",
+        "type": "String"
+      },
+      {
+        "name": "HEIGHT",
+        "type": "Decimal"
+      },
+      {
+        "name": "ICMSONSERVICE_BR",
+        "type": "String"
+      },
+      {
+        "name": "INTRACODE",
+        "type": "String"
+      },
+      {
+        "name": "INTRASTATPROCID_CZ",
+        "type": "String"
+      },
+      {
+        "name": "INTRAUNIT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTDIM_CONFIGID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTDIM_INVENTSIZEID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTPRODUCTTYPE_BR",
+        "type": "String"
+      },
+      {
+        "name": "INVENTSITEID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_ALLOCATEMARKUP",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_ENDDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_LINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_MARKUPSECCUR_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_MAXIRETPRICE_IN",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_MAXPRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_MINPRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_MULTILINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_OVERDELIVERYPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PDSPRICPRECISION",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PRICEDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PRICEQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PRICESECCUR_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_PRICEUNIT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_SUPPITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_TAXITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_UNDERDELIVERYPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENT_UNITID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENTPURCH_ENDDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEINVENTSALES_ENDDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_ALLOCATEMA",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_ENDDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_LINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_MARKUPSECCUR_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_MAXIRETPRICE_IN",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_MAXPRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_MINPRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_MULTILINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_OVERDELIVERYPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PDSPRICPRECISION",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PRICEDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PRICEQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PRICESECCUR_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_PRICEUNIT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_SUPPITEMGR",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_TAXITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_UNDERDELIVERYPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULEPURCH_UNITID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_ALLOCATEMA",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_ENDDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_LINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_MARKUPSECCUR_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_MAXIRETPRICE_IN",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_MAXPRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_MINPRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_MULTILINEDISC",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_OVERDELIVERYPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PDSPRICPRECISION",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PRICE",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PRICEDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PRICEINCLVAT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PRICEQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PRICESECCUR_RU",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_PRICEUNIT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_SUPPITEMGR",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_TAXITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_UNDERDELIVERYPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTTABLEMODULESALES_UNITID",
+        "type": "String"
+      },
+      {
+        "name": "ISSELECTED",
+        "type": "Int32"
+      },
+      {
+        "name": "ITEMBUYERGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "ITEMDIMCOSTPRICE",
+        "type": "String"
+      },
+      {
+        "name": "ITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "ITEMID",
+        "type": "String"
+      },
+      {
+        "name": "ITEMINVENTLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "ITEMPRICETOLERANCEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "ITEMTAGGINGLEVEL",
+        "type": "String"
+      },
+      {
+        "name": "ITEMTYPE",
+        "type": "String"
+      },
+      {
+        "name": "KEYINGINPRICE",
+        "type": "String"
+      },
+      {
+        "name": "KEYINGINQTY",
+        "type": "String"
+      },
+      {
+        "name": "LIFEFROM",
+        "type": "Datetime"
+      },
+      {
+        "name": "LIFETO",
+        "type": "Datetime"
+      },
+      {
+        "name": "LOWESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "MARKUPCODE_RU",
+        "type": "String"
+      },
+      {
+        "name": "MATCHINGPOLICY",
+        "type": "String"
+      },
+      {
+        "name": "MINIMUMPALLETQUANTITY",
+        "type": "Decimal"
+      },
+      {
+        "name": "MODELGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "MUSTKEYINCOMMENT",
+        "type": "String"
+      },
+      {
+        "name": "NAMEALIAS",
+        "type": "String"
+      },
+      {
+        "name": "NETWEIGHT",
+        "type": "Decimal"
+      },
+      {
+        "name": "NODISCOUNTALLOWED",
+        "type": "String"
+      },
+      {
+        "name": "NRTAXGROUP_LV",
+        "type": "String"
+      },
+      {
+        "name": "ORIGCOUNTRYREGIONID",
+        "type": "String"
+      },
+      {
+        "name": "ORIGCOUNTYID",
+        "type": "String"
+      },
+      {
+        "name": "ORIGSTATEID",
+        "type": "String"
+      },
+      {
+        "name": "PACKAGINGGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PACKING_RU",
+        "type": "String"
+      },
+      {
+        "name": "PALLETTAGGING",
+        "type": "String"
+      },
+      {
+        "name": "PBAAUTOSTART",
+        "type": "String"
+      },
+      {
+        "name": "PBAHIDEAPPROVAL",
+        "type": "String"
+      },
+      {
+        "name": "PBAHIDEDIALOG",
+        "type": "String"
+      },
+      {
+        "name": "PBAINVENTITEMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PBAITEMAUTOGENERATED",
+        "type": "String"
+      },
+      {
+        "name": "PBAITEMCONFIGURABLE",
+        "type": "String"
+      },
+      {
+        "name": "PBAMANDATORYCONFIG",
+        "type": "String"
+      },
+      {
+        "name": "PDSBASEATTRIBUTEID",
+        "type": "String"
+      },
+      {
+        "name": "PDSBESTBEFORE",
+        "type": "Int32"
+      },
+      {
+        "name": "PDSCWPRODUCT",
+        "type": "String"
+      },
+      {
+        "name": "PDSCWWMSMINIMUMPALLETQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "PDSCWWMSQTYPERLAYER",
+        "type": "Decimal"
+      },
+      {
+        "name": "PDSCWWMSSTANDARDPALLETQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "PDSFREIGHTALLOCATIONGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PDSITEMREBATEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PDSPOTENCYATTRIBRECORDING",
+        "type": "String"
+      },
+      {
+        "name": "PDSSHELFADVICE",
+        "type": "Int32"
+      },
+      {
+        "name": "PDSSHELFLIFE",
+        "type": "Int32"
+      },
+      {
+        "name": "PDSTARGETFACTOR",
+        "type": "Decimal"
+      },
+      {
+        "name": "PDSVENDORCHECKITEM",
+        "type": "String"
+      },
+      {
+        "name": "PHANTOM",
+        "type": "String"
+      },
+      {
+        "name": "PKWIUCODE_PL",
+        "type": "String"
+      },
+      {
+        "name": "PMFPLANNINGITEMID",
+        "type": "String"
+      },
+      {
+        "name": "PMFPRODUCTTYPE",
+        "type": "String"
+      },
+      {
+        "name": "PMFYIELDPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "PRIMARYVENDORID",
+        "type": "String"
+      },
+      {
+        "name": "PRODFLUSHINGPRINCIP",
+        "type": "String"
+      },
+      {
+        "name": "PRODGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "PRODPOOLID",
+        "type": "String"
+      },
+      {
+        "name": "PRODUCTSUBTYPE",
+        "type": "String"
+      },
+      {
+        "name": "PRODUCTTYPE",
+        "type": "String"
+      },
+      {
+        "name": "PROJCATEGORYID",
+        "type": "String"
+      },
+      {
+        "name": "PROPERTYID",
+        "type": "String"
+      },
+      {
+        "name": "PURCHINVENTLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "PURCHMODEL",
+        "type": "String"
+      },
+      {
+        "name": "QTYBECOMESNEGATIVE",
+        "type": "String"
+      },
+      {
+        "name": "QTYPERLAYER",
+        "type": "Decimal"
+      },
+      {
+        "name": "RELEASEPRODUCTCOMPANY",
+        "type": "String"
+      },
+      {
+        "name": "REQGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "SADRATECODE_PL",
+        "type": "String"
+      },
+      {
+        "name": "SALESCONTRIBUTIONRATIO",
+        "type": "Decimal"
+      },
+      {
+        "name": "SALESINVENTLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "SALESMODEL",
+        "type": "String"
+      },
+      {
+        "name": "SALESPERCENTMARKUP",
+        "type": "Decimal"
+      },
+      {
+        "name": "SALESPRICEMODELBASIC",
+        "type": "String"
+      },
+      {
+        "name": "SCALEITEM",
+        "type": "String"
+      },
+      {
+        "name": "SCRAPCONST",
+        "type": "Decimal"
+      },
+      {
+        "name": "SCRAPVAR",
+        "type": "Decimal"
+      },
+      {
+        "name": "SEARCHNAME",
+        "type": "String"
+      },
+      {
+        "name": "SEASONCODE",
+        "type": "String"
+      },
+      {
+        "name": "SERIALNUMGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "SERVICECODETABLE_IN_SERVICECODE",
+        "type": "String"
+      },
+      {
+        "name": "SKIPINTRACOMPANYSYNC_RU",
+        "type": "String"
+      },
+      {
+        "name": "SORTCODE",
+        "type": "Int32"
+      },
+      {
+        "name": "STANDARDCONFIGID",
+        "type": "String"
+      },
+      {
+        "name": "STANDARDINVENTCOLORID",
+        "type": "String"
+      },
+      {
+        "name": "STANDARDINVENTSIZEID",
+        "type": "String"
+      },
+      {
+        "name": "STANDARDPALLETQUANTITY",
+        "type": "Decimal"
+      },
+      {
+        "name": "STATISTICSFACTOR",
+        "type": "Decimal"
+      },
+      {
+        "name": "TARAWEIGHT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXFISCALCLASSIFICATION_BR",
+        "type": "String"
+      },
+      {
+        "name": "TAXPACKAGINGQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "TAXSERVICECODE_BR",
+        "type": "String"
+      },
+      {
+        "name": "TRANSFERSTATUS",
+        "type": "Int32"
+      },
+      {
+        "name": "UNITVOLUME",
+        "type": "Decimal"
+      },
+      {
+        "name": "USEALTITEMID",
+        "type": "String"
+      },
+      {
+        "name": "USEEANSTANDARDBARCODE",
+        "type": "String"
+      },
+      {
+        "name": "VARIANTCONFIGURATIONTECHNOLOGY",
+        "type": "String"
+      },
+      {
+        "name": "WIDTH",
+        "type": "Decimal"
+      },
+      {
+        "name": "WMSARRIVALHANDLINGTIME",
+        "type": "Int32"
+      },
+      {
+        "name": "WMSPALLETTYPEID",
+        "type": "String"
+      },
+      {
+        "name": "WMSPICKINGQTYTIME",
+        "type": "Int32"
+      },
+      {
+        "name": "ZEROPRICEVALID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int32"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "BATCHMERGEDATECALCULATIONMETHOD",
+        "type": "String"
+      },
+      {
+        "name": "COUNTGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "FILTERCHANGED",
+        "type": "String"
+      },
+      {
+        "name": "FILTERCODE",
+        "type": "String"
+      },
+      {
+        "name": "FILTERCODE2_",
+        "type": "String"
+      },
+      {
+        "name": "FILTERCODE3_",
+        "type": "String"
+      },
+      {
+        "name": "FILTERCODE4_",
+        "type": "String"
+      },
+      {
+        "name": "FILTERGROUP",
+        "type": "String"
+      },
+      {
+        "name": "FILTERGROUP2_",
+        "type": "String"
+      },
+      {
+        "name": "HARMONIZEDCODE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINV_ATPBACKWARDDEMANDTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMINV_ATPBACKWARDSUPPLYTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMINVENT_ATPAPPLYDEMANDTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMINVENT_ATPAPPLYSUPPLYTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMINVENT_ATPINCLPLANNEDORDERS",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINVENT_DELIVERYDATECONTROLTYPE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINVENT_MANDATORYINVENTLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINVENTSETU_MANDATORYINVENTSITE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_ATPTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_HIGHESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_INVENTSITEDEFAULT",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_LEADTIME",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_LOWESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_MULTIPLEQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_OVERRIDE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_STANDARDQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMINVENTSETUP_STOPPED",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMPURCH_MANDATORYINVENTLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_HIGHESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_INVENTSITEDEFAULT",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_LEADTIME",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_LOWESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_MANDATORYINVENTSITE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_MULTIPLEQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_OVERRIDE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_STANDARDQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMPURCHSETUP_STOPPED",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMSAL_ATPBACKWARDDEMANDTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMSAL_ATPBACKWARDSUPPLYTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMSALES_ATPAPPLYDEMANDTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMSALES_ATPAPPLYSUPPLYTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMSALES_DELIVERYDATECONTROLTYPE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMSALESSETU_ATPINCLPLANNEDORDERS",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_ATPTIMEFENCE",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_HIGHESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_INVENTSITEDEFAULT",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_LEADTIME",
+        "type": "Int32"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_LOWESTQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_MULTIPLEQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_OVERRIDE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTITEMSALESSETUP_STANDARDQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULEINVENT_ALLOCATEMARKUP",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULEINVENT_INTERCOMPANYBLOCKED",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULEINVENT_MARKUP",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTMODULEINVENT_MARKUPGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULEPURCH_ALLOCATEMARKUP",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULEPURCH_INTERCOMPANYBLOCKED",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULEPURCH_MARKUP",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTMODULEPURCH_MARKUPGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULESALES_ALLOCATEMARKUP",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULESALES_INTERCOMPANYBLOCKED",
+        "type": "String"
+      },
+      {
+        "name": "INVENTMODULESALES_MARKUP",
+        "type": "Decimal"
+      },
+      {
+        "name": "INVENTMODULESALES_MARKUPGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "ISREUSECONFIGURATIONENABLED",
+        "type": "String"
+      },
+      {
+        "name": "ISVARIANTGENERATIONENABLED",
+        "type": "String"
+      },
+      {
+        "name": "MANDATORYINVENTLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "MANDATORYINVENTSITE",
+        "type": "String"
+      },
+      {
+        "name": "MAXPICKQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "NMFCCODE",
+        "type": "String"
+      },
+      {
+        "name": "OVERRIDESALESLEADTIME",
+        "type": "String"
+      },
+      {
+        "name": "PACKAGECLASSID",
+        "type": "String"
+      },
+      {
+        "name": "PACKSIZECATEOGRYID",
+        "type": "String"
+      },
+      {
+        "name": "PDSCWMAX",
+        "type": "Decimal"
+      },
+      {
+        "name": "PDSCWMIN",
+        "type": "Decimal"
+      },
+      {
+        "name": "PDSCWUNITID",
+        "type": "String"
+      },
+      {
+        "name": "PHYSDIMID",
+        "type": "String"
+      },
+      {
+        "name": "PICKWCNEG",
+        "type": "String"
+      },
+      {
+        "name": "PRODQTY",
+        "type": "Decimal"
+      },
+      {
+        "name": "RETAILCOLORGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "RETAILSIZEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "RETAILSTYLEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "RFDESCRIPTION1",
+        "type": "String"
+      },
+      {
+        "name": "RFDESCRIPTION2",
+        "type": "String"
+      },
+      {
+        "name": "STANDARDINVENTSTYLEID",
+        "type": "String"
+      },
+      {
+        "name": "STCCCODE",
+        "type": "String"
+      },
+      {
+        "name": "STOPPED",
+        "type": "String"
+      },
+      {
+        "name": "UOMSEQGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "WHSINVENTFIXED_INVENTSITEID",
+        "type": "String"
+      },
+      {
+        "name": "WMSLOCATIONID",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "DMFProductEntity.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

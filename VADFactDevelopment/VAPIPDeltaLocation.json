@@ -1,0 +1,139 @@
+{
+  "name": "VAPIPDeltaLocation",
+  "properties": {
+    "activities": [
+      {
+        "type": "DataLakeAnalyticsU-SQL",
+        "typeProperties": {
+          "scriptPath": "unifiedusql/VALocationJOIN.usql",
+          "scriptLinkedService": "VALnkBlobStorage",
+          "degreeOfParallelism": 2,
+          "parameters": {
+            "dirpartytable": "/DynamicsAX/DIRPARTYTABLE.Csv",
+            "inventlocation": "/DynamicsAX/INVENTLOCATION.Csv",
+            "logisticspostaladdress": "/DynamicsAX/LOGISTICSPOSTALADDRESS.Csv",
+            "retailchanneltable": "/DynamicsAX/RETAILCHANNELTABLE.Csv",
+            "retailstorelocatorgroup": "/DynamicsAX/RETAILSTORELOCATORGROUP.Csv",
+            "retailterminaltable": "/DynamicsAX/RETAILTERMINALTABLE.Csv",
+            "location": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Location/NEW/location.Csv"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSUnifReadDIRPARTYTABLE"
+          },
+          {
+            "name": "VADSUnifReadINVENTLOCATION"
+          },
+          {
+            "name": "VADSUnifReadLOGISTICSPOSTALADDRESS"
+          },
+          {
+            "name": "VADSUnifReadRETAILCHANNELTABLE"
+          },
+          {
+            "name": "VADSUnifReadRETAILSTORELOCATORGROUP"
+          },
+          {
+            "name": "VADSUnifReadRETAILTERMINALTABLE"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSUnifWriteLOCATION"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "USQL to transform the location Data",
+        "linkedServiceName": "VALnkDataLakeAnalytics"
+      },
+      {
+        "type": "DataLakeAnalyticsU-SQL",
+        "typeProperties": {
+          "scriptPath": "deltausql/VALocationDELTA.usql",
+          "scriptLinkedService": "VALnkBlobStorage",
+          "degreeOfParallelism": 2,
+          "parameters": {
+            "loc_newfile": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Location/NEW/location.Csv",
+            "loc_oldfile": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Location/OLD/locationold.Csv",
+            "location": "$$Text.Format('wasb://locationdelta@vablobstorage.blob.core.windows.net/Location.Csv')"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSNewLocation"
+          },
+          {
+            "name": "VADSOldLocation"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSDeltalocation"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "U-SQL Script to compare location data and move to blob storage",
+        "linkedServiceName": "VALnkDataLakeAnalytics"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "AzureDataLakeStoreSource",
+            "recursive": false
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "copyBehavior": "MergeFiles",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSNewLocation"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSOldLocation"
+          }
+        ],
+        "policy": {
+          "timeout": "1.00:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "retry": 2
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyActivity",
+        "description": "Copy text file from new location to old location"
+      }
+    ],
+    "start": "2017-10-25T00:00:00Z",
+    "end": "2017-10-25T23:59:59Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

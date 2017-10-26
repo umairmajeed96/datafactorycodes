@@ -1,0 +1,374 @@
+{
+  "name": "VADSUnifWritecustomer",
+  "properties": {
+    "structure": [
+      {
+        "name": "VAVersion",
+        "type": "Int64"
+      },
+      {
+        "name": "BusinessUnitKey",
+        "type": "Int64"
+      },
+      {
+        "name": "CustomerId",
+        "type": "Int64"
+      },
+      {
+        "name": "FirstName",
+        "type": "String"
+      },
+      {
+        "name": "MiddleName",
+        "type": "String"
+      },
+      {
+        "name": "LastName",
+        "type": "String"
+      },
+      {
+        "name": "CustomerGroupNumber",
+        "type": "String"
+      },
+      {
+        "name": "CustomerGroupName",
+        "type": "String"
+      },
+      {
+        "name": "CreateLocationID",
+        "type": "String"
+      },
+      {
+        "name": "HouseholdID",
+        "type": "String"
+      },
+      {
+        "name": "ActiveId",
+        "type": "String"
+      },
+      {
+        "name": "GoldPremiumInd",
+        "type": "String"
+      },
+      {
+        "name": "RegularInd",
+        "type": "String"
+      },
+      {
+        "name": "MailOrderBuyerInd",
+        "type": "String"
+      },
+      {
+        "name": "MailOrderResponderInd",
+        "type": "String"
+      },
+      {
+        "name": "MobPurchasingInd",
+        "type": "String"
+      },
+      {
+        "name": "WorkingWomenInd",
+        "type": "String"
+      },
+      {
+        "name": "EcomCustomerInd",
+        "type": "String"
+      },
+      {
+        "name": "OkToEmailInd",
+        "type": "String"
+      },
+      {
+        "name": "DoNotPromoteInd",
+        "type": "String"
+      },
+      {
+        "name": "OkToMailInd",
+        "type": "String"
+      },
+      {
+        "name": "OkToPhoneInd",
+        "type": "String"
+      },
+      {
+        "name": "PromotableInd",
+        "type": "String"
+      },
+      {
+        "name": "AddressReliableInd",
+        "type": "String"
+      },
+      {
+        "name": "SMSInd",
+        "type": "String"
+      },
+      {
+        "name": "CallInd",
+        "type": "String"
+      },
+      {
+        "name": "GuestCustomerInd",
+        "type": "String"
+      },
+      {
+        "name": "CreditCardType",
+        "type": "String"
+      },
+      {
+        "name": "ActivePrivateCardInd",
+        "type": "String"
+      },
+      {
+        "name": "ClosedPrivateCardInd",
+        "type": "String"
+      },
+      {
+        "name": "DeclinePrivateCardInd",
+        "type": "String"
+      },
+      {
+        "name": "LoyaltyCardName",
+        "type": "String"
+      },
+      {
+        "name": "LoyaltyCardType",
+        "type": "String"
+      },
+      {
+        "name": "LoyaltyCardSignUpDate",
+        "type": "Datetime"
+      },
+      {
+        "name": "ShippingName",
+        "type": "String"
+      },
+      {
+        "name": "ShipAddressLine1",
+        "type": "String"
+      },
+      {
+        "name": "ShipAddressLine2",
+        "type": "String"
+      },
+      {
+        "name": "ShipAddressLine3",
+        "type": "String"
+      },
+      {
+        "name": "ShipZipCode",
+        "type": "String"
+      },
+      {
+        "name": "ShipCity",
+        "type": "String"
+      },
+      {
+        "name": "ShipState",
+        "type": "String"
+      },
+      {
+        "name": "ShipCountry",
+        "type": "String"
+      },
+      {
+        "name": "ShipPhoneType",
+        "type": "String"
+      },
+      {
+        "name": "ShipPhoneNumber",
+        "type": "String"
+      },
+      {
+        "name": "ShipCellNumber",
+        "type": "String"
+      },
+      {
+        "name": "ShipEmailInd",
+        "type": "String"
+      },
+      {
+        "name": "ShipEmailAddress",
+        "type": "String"
+      },
+      {
+        "name": "ShipFaxNo",
+        "type": "String"
+      },
+      {
+        "name": "ShipLongitude",
+        "type": "Decimal"
+      },
+      {
+        "name": "ShipLatitude",
+        "type": "Decimal"
+      },
+      {
+        "name": "CustomerBillingName",
+        "type": "String"
+      },
+      {
+        "name": "CustBillAddressLine1",
+        "type": "String"
+      },
+      {
+        "name": "CustBillAddressLine2",
+        "type": "String"
+      },
+      {
+        "name": "CustBillAddressLine3",
+        "type": "String"
+      },
+      {
+        "name": "CustBillZipCode",
+        "type": "String"
+      },
+      {
+        "name": "CustBillCity",
+        "type": "String"
+      },
+      {
+        "name": "CustBillState",
+        "type": "String"
+      },
+      {
+        "name": "CustBillCountry",
+        "type": "String"
+      },
+      {
+        "name": "CustBillPhoneType",
+        "type": "String"
+      },
+      {
+        "name": "CustBillPhoneNumber",
+        "type": "String"
+      },
+      {
+        "name": "CustBillCellNumber",
+        "type": "String"
+      },
+      {
+        "name": "CustBillEmailInd",
+        "type": "String"
+      },
+      {
+        "name": "CustBillEmailAddress",
+        "type": "String"
+      },
+      {
+        "name": "CustBillFaxNo",
+        "type": "String"
+      },
+      {
+        "name": "CustBillLongitude",
+        "type": "Decimal"
+      },
+      {
+        "name": "CustBillLatitude",
+        "type": "Decimal"
+      },
+      {
+        "name": "DateOfBirth",
+        "type": "Datetime"
+      },
+      {
+        "name": "BirthdayMonth",
+        "type": "String"
+      },
+      {
+        "name": "DeceasedDate",
+        "type": "Datetime"
+      },
+      {
+        "name": "Income",
+        "type": "Decimal"
+      },
+      {
+        "name": "Race",
+        "type": "String"
+      },
+      {
+        "name": "Ethnicity",
+        "type": "String"
+      },
+      {
+        "name": "MaritalStatus",
+        "type": "String"
+      },
+      {
+        "name": "Gender",
+        "type": "String"
+      },
+      {
+        "name": "DwellingType",
+        "type": "String"
+      },
+      {
+        "name": "HomeAssessedValue",
+        "type": "Decimal"
+      },
+      {
+        "name": "HomeMarketValue",
+        "type": "Decimal"
+      },
+      {
+        "name": "HomeOwnerValue",
+        "type": "Decimal"
+      },
+      {
+        "name": "HomeValuePremier",
+        "type": "Decimal"
+      },
+      {
+        "name": "LengthOfResidence",
+        "type": "Int64"
+      },
+      {
+        "name": "NumberOfChildren",
+        "type": "Int64"
+      },
+      {
+        "name": "CountryOrigin",
+        "type": "String"
+      },
+      {
+        "name": "Education",
+        "type": "String"
+      },
+      {
+        "name": "LanguagePreference",
+        "type": "String"
+      },
+      {
+        "name": "SourceSystem",
+        "type": "String"
+      },
+      {
+        "name": "SourceCreatedDateTime",
+        "type": "Datetime"
+      },
+      {
+        "name": "SourceModifiedDateTime",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "Customer.Csv",
+      "folderPath": "VAUnifiedmodel/Customer/NEW",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": false,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

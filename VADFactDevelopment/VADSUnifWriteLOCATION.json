@@ -1,0 +1,138 @@
+{
+  "name": "VADSUnifWriteLOCATION",
+  "properties": {
+    "structure": [
+      {
+        "name": "VAVersion",
+        "type": "Int64"
+      },
+      {
+        "name": "BusinessUnitKey",
+        "type": "String"
+      },
+      {
+        "name": "LocationNumber",
+        "type": "String"
+      },
+      {
+        "name": "LocationType",
+        "type": "Int64"
+      },
+      {
+        "name": "Channel",
+        "type": "String"
+      },
+      {
+        "name": "LocationName",
+        "type": "String"
+      },
+      {
+        "name": "OpenigTime",
+        "type": "Int64"
+      },
+      {
+        "name": "ClosingTime",
+        "type": "Int64"
+      },
+      {
+        "name": "LocationManager",
+        "type": "String"
+      },
+      {
+        "name": "LocationGroup",
+        "type": "String"
+      },
+      {
+        "name": "LocationBrandID",
+        "type": "String"
+      },
+      {
+        "name": "LocationBrandName",
+        "type": "String"
+      },
+      {
+        "name": "POSRegisterId",
+        "type": "String"
+      },
+      {
+        "name": "POSRegisterDsc",
+        "type": "String"
+      },
+      {
+        "name": "AddressLine1",
+        "type": "String"
+      },
+      {
+        "name": "AddressLine2",
+        "type": "String"
+      },
+      {
+        "name": "AddressLine3",
+        "type": "String"
+      },
+      {
+        "name": "ZipCode",
+        "type": "String"
+      },
+      {
+        "name": "City",
+        "type": "String"
+      },
+      {
+        "name": "State",
+        "type": "String"
+      },
+      {
+        "name": "Country",
+        "type": "String"
+      },
+      {
+        "name": "Longitude",
+        "type": "String"
+      },
+      {
+        "name": "Latitude",
+        "type": "String"
+      },
+      {
+        "name": "OnlineInd",
+        "type": "Int64"
+      },
+      {
+        "name": "TimeZone",
+        "type": "String"
+      },
+      {
+        "name": "ActiveInd",
+        "type": "Int64"
+      },
+      {
+        "name": "SourceSystem",
+        "type": "String"
+      },
+      {
+        "name": "SourceCreatedDateTime",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "location.Csv",
+      "folderPath": "VAUnifiedmodel/Location/NEW",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": false,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

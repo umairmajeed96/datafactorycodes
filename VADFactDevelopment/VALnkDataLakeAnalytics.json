@@ -1,0 +1,15 @@
+{
+  "name": "VALnkDataLakeAnalytics",
+  "properties": {
+    "description": "",
+    "type": "AzureDataLakeAnalytics",
+    "typeProperties": {
+      "accountName": "vadlakeanalytics",
+      "authorization": "**********",
+      "sessionId": "**********",
+      "subscriptionId": "32795d72-1de4-4f2a-84df-7c281c4ec77e",
+      "resourceGroupName": "varesourcegroup"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json"
+}

@@ -1,0 +1,162 @@
+{
+  "name": "VADSUnifReadRETAILTRANSACTIONINFOCODETRANS",
+  "properties": {
+    "structure": [
+      {
+        "name": "TRANSACTIONID",
+        "type": "String"
+      },
+      {
+        "name": "LINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "TYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "INFOCODEID",
+        "type": "String"
+      },
+      {
+        "name": "INFORMATION",
+        "type": "String"
+      },
+      {
+        "name": "INFOAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "TRANSDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "TRANSTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "STORE",
+        "type": "String"
+      },
+      {
+        "name": "TERMINAL",
+        "type": "String"
+      },
+      {
+        "name": "STAFF",
+        "type": "String"
+      },
+      {
+        "name": "ITEMTENDER",
+        "type": "String"
+      },
+      {
+        "name": "AMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "INPUTTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "SUBINFOCODEID",
+        "type": "String"
+      },
+      {
+        "name": "STATEMENTID",
+        "type": "String"
+      },
+      {
+        "name": "STATEMENTCODE",
+        "type": "String"
+      },
+      {
+        "name": "SOURCECODE",
+        "type": "String"
+      },
+      {
+        "name": "COUNTER",
+        "type": "Int64"
+      },
+      {
+        "name": "REPLICATED",
+        "type": "Int64"
+      },
+      {
+        "name": "TRANSACTIONSTATUS",
+        "type": "Int64"
+      },
+      {
+        "name": "SOURCECODE2",
+        "type": "String"
+      },
+      {
+        "name": "SOURCECODE3",
+        "type": "String"
+      },
+      {
+        "name": "REPLICATIONCOUNTERFROMORIGIN",
+        "type": "Int64"
+      },
+      {
+        "name": "BUSINESSDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "CHANNEL",
+        "type": "Int64"
+      },
+      {
+        "name": "ORIGIN",
+        "type": "String"
+      },
+      {
+        "name": "PARENTLINENUM",
+        "type": "Decimal"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDatetime",
+        "type": "Datetime"
+      },
+      {
+        "name": "CREATEDDatetime",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "RETAILTRANSACTIONINFOCODETRANS.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

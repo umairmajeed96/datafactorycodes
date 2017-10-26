@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>5cee3afe-6712-47f3-a8ae-e53db700b879</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>DataFactory</AssemblyName>
+    <ApiVersion>2015-09-01</ApiVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Name>VADFactDevelopment</Name>
+    <RootNamespace>VADFactDevelopment</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ADFConfigFileToPublish>
+    </ADFConfigFileToPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Dependencies\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Script Include="Destination-DataLakeStore-pzr.json" />
+    <Script Include="VADSAXReadCREDITCARDCUST.json" />
+    <Script Include="VADSAXReadCUSTTABLE.json" />
+    <Script Include="VADSAXReadDIRPARTYTABLE.json" />
+    <Script Include="VADSAXReadDMFProductEntity.json" />
+    <Script Include="VADSAXReadDMFProductVariantEntity.json" />
+    <Script Include="VADSAXReadEcoresProduct.json" />
+    <Script Include="VADSAXReadEcoresProductTranslation.json" />
+    <Script Include="VADSAXReadEGXProductBrand.json" />
+    <Script Include="VADSAXReadInventDIMCombination.json" />
+    <Script Include="VADSAXReadInventItemBarcode.json" />
+    <Script Include="VADSAXReadInventItemGroupItem.json" />
+    <Script Include="VADSAXReadInventItemPrice.json" />
+    <Script Include="VADSAXReadINVENTLOCATION.json" />
+    <Script Include="VADSAXReadInventTable.json" />
+    <Script Include="VADSAXReadLOGISTICSELECTRONICADDRESS.json" />
+    <Script Include="VADSAXReadLOGISTICSPOSTALADDRESS.json" />
+    <Script Include="VADSAXReadPriceDiscTable.json" />
+    <Script Include="VADSAXReadRETAILCHANNELTABLE.json" />
+    <Script Include="VADSAXReadRetailSeasonTable.json" />
+    <Script Include="VADSAXReadRETAILSTORELOCATORGROUP.json" />
+    <Script Include="VADSAXReadRETAILTERMINALTABLE.json" />
+    <Script Include="VADSAXReadRetailTransactionInfoCodeTrans.json" />
+    <Script Include="VADSAXReadRetailTransactionMarkUpTrans.json" />
+    <Script Include="VADSAXReadRetailTransactionSalesTrans.json" />
+    <Script Include="VADSAXReadRetailTransactionTable.json" />
+    <Script Include="VADSAXWriteCREDITCARDCUST.json" />
+    <Script Include="VADSAXWriteCUSTTABLE.json" />
+    <Script Include="VADSAXWriteDIRPARTYTABLE.json" />
+    <Script Include="VADSAXWriteDMFProductEntity.json" />
+    <Script Include="VADSAXWriteDMFProductVariantEntity.json" />
+    <Script Include="VADSAXWriteEcoresProduct.json" />
+    <Script Include="VADSAXWriteEcoresProductTranslation.json" />
+    <Script Include="VADSAXWriteEGXProductBrand.json" />
+    <Script Include="VADSAXWriteInventDIMCombination.json" />
+    <Script Include="VADSAXWriteInventItemBarcode.json" />
+    <Script Include="VADSAXWriteInventItemGroupItem.json" />
+    <Script Include="VADSAXWriteInventItemPrice.json" />
+    <Script Include="VADSAXWriteINVENTLOCATION.json" />
+    <Script Include="VADSAXWriteInventTable.json" />
+    <Script Include="VADSAXWriteLOGISTICSELECTRONICADDRESS.json" />
+    <Script Include="VADSAXWriteLOGISTICSPOSTALADDRESS.json" />
+    <Script Include="VADSAXWritePriceDiscTable.json" />
+    <Script Include="VADSAXWriteRETAILCHANNELTABLE.json" />
+    <Script Include="VADSAXWriteRetailSeasonTable.json" />
+    <Script Include="VADSAXWriteRETAILSTORELOCATORGROUP.json" />
+    <Script Include="VADSAXWriteRETAILTERMINALTABLE.json" />
+    <Script Include="VADSAXWriteRetailTransactionInfoCodeTrans.json" />
+    <Script Include="VADSAXWriteRetailTransactionMarkUpTrans.json" />
+    <Script Include="VADSAXWriteRetailTransactionSalesTrans.json" />
+    <Script Include="VADSAXWriteRetailTransactionTable.json" />
+    <Script Include="VADSDeltacustomer.json" />
+    <Script Include="VADSDeltalocation.json" />
+    <Script Include="VADSDeltaProduct.json" />
+    <Script Include="VADSDeltaTransactions.json" />
+    <Script Include="VADSNewcustomer.json" />
+    <Script Include="VADSNewLocation.json" />
+    <Script Include="VADSNewProduct.json" />
+    <Script Include="VADSNewTransactions.json" />
+    <Script Include="VADSOldcustomer.json" />
+    <Script Include="VADSOldLocation.json" />
+    <Script Include="VADSOldProduct.json" />
+    <Script Include="VADSOldTransactions.json" />
+    <Script Include="VADSUnifReadCREDITCARDCUST.json" />
+    <Script Include="VADSUnifReadCUSTTABLE.json" />
+    <Script Include="VADSUnifReadDIRPARTYTABLE.json" />
+    <Script Include="VADSUnifReadDMFProductEntity.json" />
+    <Script Include="VADSUnifReadDMFProductVariantEntity.json" />
+    <Script Include="VADSUnifReadEcoresProduct.json" />
+    <Script Include="VADSUnifReadEcoresProductTranslation.json" />
+    <Script Include="VADSUnifReadEGXProductBrand.json" />
+    <Script Include="VADSUnifReadInventDimCombination.json" />
+    <Script Include="VADSUnifReadInventItemBarcode.json" />
+    <Script Include="VADSUnifReadInventItemGroupItem.json" />
+    <Script Include="VADSUnifReadINVENTITEMPRICE.json" />
+    <Script Include="VADSUnifReadINVENTLOCATION.json" />
+    <Script Include="VADSUnifReadInventTable.json" />
+    <Script Include="VADSUnifReadLOGISTICSELECTRONICADDRESS.json" />
+    <Script Include="VADSUnifReadLOGISTICSPOSTALADDRESS.json" />
+    <Script Include="VADSUnifReadPriceDiscTable.json" />
+    <Script Include="VADSUnifReadRETAILCHANNELTABLE.json" />
+    <Script Include="VADSUnifReadRetailSeasonTable.json" />
+    <Script Include="VADSUnifReadRETAILSTORELOCATORGROUP.json" />
+    <Script Include="VADSUnifReadRETAILTERMINALTABLE.json" />
+    <Script Include="VADSUnifReadRETAILTRANSACTIONINFOCODETRANS.json" />
+    <Script Include="VADSUnifReadRETAILTRANSACTIONMARKUPTRANS.json" />
+    <Script Include="VADSUnifReadRETAILTRANSACTIONSALESTRANS.json" />
+    <Script Include="VADSUnifReadRETAILTRANSACTIONTABLE.json" />
+    <Script Include="VADSUnifWritecustomer.json" />
+    <Script Include="VADSUnifWriteLOCATION.json" />
+    <Script Include="VADSUnifWriteProduct.json" />
+    <Script Include="VADSUnifWriteTransactions.json" />
+    <Script Include="VALnkBlobStorage.json" />
+    <Script Include="VALnkDataLakeAnalytics.json" />
+    <Script Include="VALnkDLake.json" />
+    <Script Include="VALnkOnPremDynamicsAX.json" />
+    <Script Include="VAPIPDeltaCustomer.json" />
+    <Script Include="VAPIPDeltaLocation.json" />
+    <Script Include="VAPIPDeltaProduct.json" />
+    <Script Include="VAPIPDeltaTransactions.json" />
+    <Script Include="VAPIPReadOnPremToDlakeCustomer.json" />
+    <Script Include="VAPIPReadOnPremToDlakeLocation.json" />
+    <Script Include="VAPIPReadOnPremToDlakeProduct.json" />
+    <Script Include="VAPIPReadOnPremToDlakeTransactions.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dependencies\VACustomerDelta.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VACustomerJOIN.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VALocationDELTA.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VALocationJOIN.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VAProductDelta.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VAProductJoin.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VATransactionDelta.usql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dependencies\VATransactionsJOIN.usql">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\DataFactory Tools for Visual Studio\MsBuild\1.0\DataFactory.targets" />
+</Project>

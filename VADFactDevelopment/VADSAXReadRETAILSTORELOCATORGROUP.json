@@ -1,0 +1,48 @@
+{
+  "name": "VADSAXReadRETAILSTORELOCATORGROUP",
+  "properties": {
+    "structure": [
+      {
+        "name": "DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "SqlServerTable",
+    "linkedServiceName": "VALnkOnPremDynamicsAX",
+    "typeProperties": {
+      "tableName": "[dbo].[RETAILSTORELOCATORGROUP]"
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

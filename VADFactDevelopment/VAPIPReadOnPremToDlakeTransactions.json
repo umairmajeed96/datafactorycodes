@@ -1,0 +1,169 @@
+{
+  "name": "VAPIPReadOnPremToDlakeTransactions",
+  "properties": {
+    "description": "Copy Data From onpremises sql to datalake store - Transactions information",
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILTRANSACTIONTABLE]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRetailTransactionTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRetailTransactionTable"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILTRANSACTIONTABLE",
+        "description": "Copy RETAILTRANSACTIONTABLE table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILTRANSACTIONSALESTRANS]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRetailTransactionSalesTrans"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRetailTransactionSalesTrans"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILTRANSACTIONSALESTRANS",
+        "description": "Copy RETAILTRANSACTIONSALESTRANS table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILTRANSACTIONINFOCODETRANS]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRetailTransactionInfoCodeTrans"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRetailTransactionInfoCodeTrans"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILTRANSACTIONINFOCODETRANS",
+        "description": "Copy RETAILTRANSACTIONINFOCODETRANS table to text file"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from [dbo].[RETAILTRANSACTIONMARKUPTRANS]"
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRetailTransactionMarkUpTrans"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRetailTransactionMarkUpTrans"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 3,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "COPY TABLE RETAILTRANSACTIONMARKUPTRANS",
+        "description": "Copy RETAILTRANSACTIONMARKUPTRANS table to text file"
+      }
+    ],
+    "start": "2017-10-23T00:00:00Z",
+    "end": "2017-10-23T23:59:59Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

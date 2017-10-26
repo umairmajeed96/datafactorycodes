@@ -1,0 +1,137 @@
+{
+  "name": "VAPIPDeltaCustomer",
+  "properties": {
+    "activities": [
+      {
+        "type": "DataLakeAnalyticsU-SQL",
+        "typeProperties": {
+          "scriptPath": "unifiedusql/VACustomerJOIN.usql",
+          "scriptLinkedService": "VALnkBlobStorage",
+          "degreeOfParallelism": 2,
+          "parameters": {
+            "custtable": "/DynamicsAX/CUSTTABLE.Csv",
+            "dirpartytable": "/DynamicsAX/DIRPARTYTABLE.Csv",
+            "creditcardcust": "/DynamicsAX/CREDITCARDCUST.Csv",
+            "logisticspostaladdress": "/DynamicsAX/LOGISTICSPOSTALADDRESS.Csv",
+            "logisticselectronicaddress": "/DynamicsAX/LOGISTICSELECTRONICADDRESS.Csv",
+            "customer": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Customer/NEW/Customer.Csv"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSUnifReadCUSTTABLE"
+          },
+          {
+            "name": "VADSUnifReadDIRPARTYTABLE"
+          },
+          {
+            "name": "VADSUnifReadCREDITCARDCUST"
+          },
+          {
+            "name": "VADSUnifReadLOGISTICSPOSTALADDRESS"
+          },
+          {
+            "name": "VADSUnifReadLOGISTICSELECTRONICADDRESS"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSUnifWritecustomer"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "USQL to transform the customer Data",
+        "linkedServiceName": "VALnkDataLakeAnalytics"
+      },
+      {
+        "type": "DataLakeAnalyticsU-SQL",
+        "typeProperties": {
+          "scriptPath": "deltausql/VACustomerDelta.usql",
+          "scriptLinkedService": "VALnkBlobStorage",
+          "degreeOfParallelism": 2,
+          "parameters": {
+            "newcust_file": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Customer/NEW/Customer.Csv",
+            "oldcust_file": "adl://vadlakesource.azuredatalakestore.net/VAUnifiedmodel/Customer/OLD/Customer.Csv",
+            "customer": "$$Text.Format('wasb://customerdelta@vablobstorage.blob.core.windows.net/Customer.Csv')"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSNewcustomer"
+          },
+          {
+            "name": "VADSOldcustomer"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSDeltacustomer"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "retry": 1
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "U-SQL Script to compare the data",
+        "linkedServiceName": "VALnkDataLakeAnalytics"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "AzureDataLakeStoreSource",
+            "recursive": false
+          },
+          "sink": {
+            "type": "AzureDataLakeStoreSink",
+            "copyBehavior": "MergeFiles",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSNewcustomer"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSOldcustomer"
+          }
+        ],
+        "policy": {
+          "timeout": "1.00:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval",
+          "retry": 1,
+          "longRetry": 0,
+          "longRetryInterval": "00:00:00"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "Move File From NEW to OLD Customer"
+      }
+    ],
+    "start": "2017-10-25T00:00:00Z",
+    "end": "2017-10-25T23:59:59Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

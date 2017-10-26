@@ -1,0 +1,461 @@
+@newcust = EXTRACT 
+vaversion string
+,businessunitkey string
+,customerid string
+,firstname string
+,middlename string
+,lastname string
+,customergroupnumber string
+,customergroupname string
+,createlocationid string
+,householdid string
+,activeid string
+,goldpremiumind string
+,regularind string
+,mailorderbuyerind string
+,mailorderresponderind string
+,mobpurchasingind string
+,workingwomenind string
+,ecomcustomerind string
+,oktoemailind string
+,donotpromoteind string
+,oktomailind string
+,oktophoneind string
+,promotableind string
+,addressreliableind string
+,smsind string
+,callind string
+,guestcustomerind string
+,creditcardtype string
+,activeprivatecardind string
+,closedprivatecardind string
+,declineprivatecardind  string
+,loyaltycardname  string
+,loyaltycardtype string
+,loyaltycardsignupdate string
+,shippingname string
+,shipaddressline1 string
+,shipaddressline2 string
+,shipaddressline3 string
+,shipzipcode string
+,shipcity string
+,shipstate string
+,shipcountry string
+,shipphonetype string
+,shipphonenumber string
+,shipcellnumber string
+,shipemailind string
+,shipemailaddress string
+,shipfaxno string
+,shiplongitude string
+,shiplatitude string
+,customerbillingname string
+,custbilladdressline1 string
+,custbilladdressline2 string
+,custbilladdressline3 string
+,custbillzipcode string
+,custbillcity string
+,custbillstate string
+,custbillcountry string
+,custbillphonetype string
+,custbillphonenumber string
+,custbillcellnumber string
+,custbillemailind string
+,custbillemailaddress string
+,custbillfaxno string
+,custbilllongitude string
+,custbilllatitude string
+,dateofbirth string
+,birthdaymonth string
+,deceaseddate string
+,income string
+,race string
+,ethnicity string
+,maritalstatus string
+,gender string
+,dwellingtype string
+,homeassessedvalue string
+,homemarketvalue string
+,homeownervalue string
+,homevaluepremier string
+,lengthofresidence string
+,numberofchildren string
+,countryorigin string
+,education string
+,languagepreference string
+,sourcesystem string
+,sourcecreateddatetime string 
+,sourcemodifieddatetime string
+FROM @newcust_file
+USING Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+IF (FILE.EXISTS(@oldcust_file))
+THEN
+@oldcust = EXTRACT 
+vaversion string
+,businessunitkey string
+,customerid string
+,firstname string
+,middlename string
+,lastname string
+,customergroupnumber string
+,customergroupname string
+,createlocationid string
+,householdid string
+,activeid string
+,goldpremiumind string
+,regularind string
+,mailorderbuyerind string
+,mailorderresponderind string
+,mobpurchasingind string
+,workingwomenind string
+,ecomcustomerind string
+,oktoemailind string
+,donotpromoteind string
+,oktomailind string
+,oktophoneind string
+,promotableind string
+,addressreliableind string
+,smsind string
+,callind string
+,guestcustomerind string
+,creditcardtype string
+,activeprivatecardind string
+,closedprivatecardind string
+,declineprivatecardind  string
+,loyaltycardname  string
+,loyaltycardtype string
+,loyaltycardsignupdate string
+,shippingname string
+,shipaddressline1 string
+,shipaddressline2 string
+,shipaddressline3 string
+,shipzipcode string
+,shipcity string
+,shipstate string
+,shipcountry string
+,shipphonetype string
+,shipphonenumber string
+,shipcellnumber string
+,shipemailind string
+,shipemailaddress string
+,shipfaxno string
+,shiplongitude string
+,shiplatitude string
+,customerbillingname string
+,custbilladdressline1 string
+,custbilladdressline2 string
+,custbilladdressline3 string
+,custbillzipcode string
+,custbillcity string
+,custbillstate string
+,custbillcountry string
+,custbillphonetype string
+,custbillphonenumber string
+,custbillcellnumber string
+,custbillemailind string
+,custbillemailaddress string
+,custbillfaxno string
+,custbilllongitude string
+,custbilllatitude string
+,dateofbirth string
+,birthdaymonth string
+,deceaseddate string
+,income string
+,race string
+,ethnicity string
+,maritalstatus string
+,gender string
+,dwellingtype string
+,homeassessedvalue string
+,homemarketvalue string
+,homeownervalue string
+,homevaluepremier string
+,lengthofresidence string
+,numberofchildren string
+,countryorigin string
+,education string
+,languagepreference string
+,sourcesystem string
+,sourcecreateddatetime string 
+,sourcemodifieddatetime string
+FROM @oldcust_file
+USING Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+@deltacust = 
+SELECT 
+nc.vaversion 
+,nc.businessunitkey 
+,nc.customerid 
+,nc.firstname 
+,nc.middlename 
+,nc.lastname 
+,nc.customergroupnumber 
+,nc.customergroupname 
+,nc.createlocationid 
+,nc.householdid 
+,nc.activeid 
+,nc.goldpremiumind 
+,nc.regularind 
+,nc.mailorderbuyerind 
+,nc.mailorderresponderind 
+,nc.mobpurchasingind 
+,nc.workingwomenind 
+,nc.ecomcustomerind 
+,nc.oktoemailind 
+,nc.donotpromoteind 
+,nc.oktomailind 
+,nc.oktophoneind 
+,nc.promotableind 
+,nc.addressreliableind 
+,nc.smsind 
+,nc.callind 
+,nc.guestcustomerind 
+,nc.creditcardtype 
+,nc.activeprivatecardind 
+,nc.closedprivatecardind 
+,nc.declineprivatecardind  
+,nc.loyaltycardname  
+,nc.loyaltycardtype 
+,nc.loyaltycardsignupdate 
+,nc.shippingname 
+,nc.shipaddressline1 
+,nc.shipaddressline2 
+,nc.shipaddressline3 
+,nc.shipzipcode 
+,nc.shipcity 
+,nc.shipstate 
+,nc.shipcountry 
+,nc.shipphonetype 
+,nc.shipphonenumber 
+,nc.shipcellnumber 
+,nc.shipemailind 
+,nc.shipemailaddress 
+,nc.shipfaxno 
+,nc.shiplongitude 
+,nc.shiplatitude 
+,nc.customerbillingname 
+,nc.custbilladdressline1 
+,nc.custbilladdressline2 
+,nc.custbilladdressline3 
+,nc.custbillzipcode 
+,nc.custbillcity 
+,nc.custbillstate 
+,nc.custbillcountry 
+,nc.custbillphonetype 
+,nc.custbillphonenumber 
+,nc.custbillcellnumber 
+,nc.custbillemailind 
+,nc.custbillemailaddress 
+,nc.custbillfaxno 
+,nc.custbilllongitude 
+,nc.custbilllatitude 
+,nc.dateofbirth 
+,nc.birthdaymonth 
+,nc.deceaseddate 
+,nc.income 
+,nc.race 
+,nc.ethnicity 
+,nc.maritalstatus 
+,nc.gender 
+,nc.dwellingtype 
+,nc.homeassessedvalue 
+,nc.homemarketvalue 
+,nc.homeownervalue 
+,nc.homevaluepremier 
+,nc.lengthofresidence 
+,nc.numberofchildren 
+,nc.countryorigin 
+,nc.education 
+,nc.languagepreference 
+,nc.sourcesystem 
+,nc.sourcecreateddatetime  
+,nc.sourcemodifieddatetime 
+FROM @newcust AS nc 
+LEFT JOIN @oldcust AS oc ON oc.vaversion  == nc.vaversion 
+AND oc.businessunitkey  == nc.businessunitkey 
+AND oc.customerid  == nc.customerid 
+AND oc.firstname  == nc.firstname 
+AND oc.middlename  == nc.middlename 
+AND oc.lastname  == nc.lastname 
+AND oc.customergroupnumber  == nc.customergroupnumber 
+AND oc.customergroupname  == nc.customergroupname 
+AND oc.createlocationid  == nc.createlocationid 
+AND oc.householdid  == nc.householdid 
+AND oc.activeid  == nc.activeid 
+AND oc.goldpremiumind  == nc.goldpremiumind 
+AND oc.regularind  == nc.regularind 
+AND oc.mailorderbuyerind  == nc.mailorderbuyerind 
+AND oc.mailorderresponderind  == nc.mailorderresponderind 
+AND oc.mobpurchasingind  == nc.mobpurchasingind 
+AND oc.workingwomenind  == nc.workingwomenind 
+AND oc.ecomcustomerind  == nc.ecomcustomerind 
+AND oc.oktoemailind  == nc.oktoemailind 
+AND oc.donotpromoteind  == nc.donotpromoteind 
+AND oc.oktomailind  == nc.oktomailind 
+AND oc.oktophoneind  == nc.oktophoneind 
+AND oc.promotableind  == nc.promotableind 
+AND oc.addressreliableind  == nc.addressreliableind 
+AND oc.smsind  == nc.smsind 
+AND oc.callind  == nc.callind 
+AND oc.guestcustomerind  == nc.guestcustomerind 
+AND oc.creditcardtype  == nc.creditcardtype 
+AND oc.activeprivatecardind  == nc.activeprivatecardind 
+AND oc.closedprivatecardind  == nc.closedprivatecardind 
+AND oc.declineprivatecardind   == nc.declineprivatecardind  
+AND oc.loyaltycardname   == nc.loyaltycardname  
+AND oc.loyaltycardtype  == nc.loyaltycardtype 
+AND oc.loyaltycardsignupdate  == nc.loyaltycardsignupdate 
+AND oc.shippingname  == nc.shippingname 
+AND oc.shipaddressline1  == nc.shipaddressline1 
+AND oc.shipaddressline2  == nc.shipaddressline2 
+AND oc.shipaddressline3  == nc.shipaddressline3 
+AND oc.shipzipcode  == nc.shipzipcode 
+AND oc.shipcity  == nc.shipcity 
+AND oc.shipstate  == nc.shipstate 
+AND oc.shipcountry  == nc.shipcountry 
+AND oc.shipphonetype  == nc.shipphonetype 
+AND oc.shipphonenumber  == nc.shipphonenumber 
+AND oc.shipcellnumber  == nc.shipcellnumber 
+AND oc.shipemailind  == nc.shipemailind 
+AND oc.shipemailaddress  == nc.shipemailaddress 
+AND oc.shipfaxno  == nc.shipfaxno 
+AND oc.shiplongitude  == nc.shiplongitude 
+AND oc.shiplatitude  == nc.shiplatitude 
+AND oc.customerbillingname  == nc.customerbillingname 
+AND oc.custbilladdressline1  == nc.custbilladdressline1 
+AND oc.custbilladdressline2  == nc.custbilladdressline2 
+AND oc.custbilladdressline3  == nc.custbilladdressline3 
+AND oc.custbillzipcode  == nc.custbillzipcode 
+AND oc.custbillcity  == nc.custbillcity 
+AND oc.custbillstate  == nc.custbillstate 
+AND oc.custbillcountry  == nc.custbillcountry 
+AND oc.custbillphonetype  == nc.custbillphonetype 
+AND oc.custbillphonenumber  == nc.custbillphonenumber 
+AND oc.custbillcellnumber  == nc.custbillcellnumber 
+AND oc.custbillemailind  == nc.custbillemailind 
+AND oc.custbillemailaddress  == nc.custbillemailaddress 
+AND oc.custbillfaxno  == nc.custbillfaxno 
+AND oc.custbilllongitude  == nc.custbilllongitude 
+AND oc.custbilllatitude  == nc.custbilllatitude 
+AND oc.dateofbirth  == nc.dateofbirth 
+AND oc.birthdaymonth  == nc.birthdaymonth 
+AND oc.deceaseddate  == nc.deceaseddate 
+AND oc.income  == nc.income 
+AND oc.race  == nc.race 
+AND oc.ethnicity  == nc.ethnicity 
+AND oc.maritalstatus  == nc.maritalstatus 
+AND oc.gender  == nc.gender 
+AND oc.dwellingtype  == nc.dwellingtype 
+AND oc.homeassessedvalue  == nc.homeassessedvalue 
+AND oc.homemarketvalue  == nc.homemarketvalue 
+AND oc.homeownervalue  == nc.homeownervalue 
+AND oc.homevaluepremier  == nc.homevaluepremier 
+AND oc.lengthofresidence  == nc.lengthofresidence 
+AND oc.numberofchildren  == nc.numberofchildren 
+AND oc.countryorigin  == nc.countryorigin 
+AND oc.education  == nc.education 
+AND oc.languagepreference  == nc.languagepreference 
+AND oc.sourcesystem  == nc.sourcesystem 
+AND oc.sourcecreateddatetime   == nc.sourcecreateddatetime  
+AND oc.sourcemodifieddatetime  == nc.sourcemodifieddatetime 
+WHERE oc.vaversion IS NULL; 
+
+ELSE 
+
+@deltacust = 
+SELECT 
+nc.vaversion 
+,nc.businessunitkey 
+,nc.customerid 
+,nc.firstname 
+,nc.middlename 
+,nc.lastname 
+,nc.customergroupnumber 
+,nc.customergroupname 
+,nc.createlocationid 
+,nc.householdid 
+,nc.activeid 
+,nc.goldpremiumind 
+,nc.regularind 
+,nc.mailorderbuyerind 
+,nc.mailorderresponderind 
+,nc.mobpurchasingind 
+,nc.workingwomenind 
+,nc.ecomcustomerind 
+,nc.oktoemailind 
+,nc.donotpromoteind 
+,nc.oktomailind 
+,nc.oktophoneind 
+,nc.promotableind 
+,nc.addressreliableind 
+,nc.smsind 
+,nc.callind 
+,nc.guestcustomerind 
+,nc.creditcardtype 
+,nc.activeprivatecardind 
+,nc.closedprivatecardind 
+,nc.declineprivatecardind  
+,nc.loyaltycardname  
+,nc.loyaltycardtype 
+,nc.loyaltycardsignupdate 
+,nc.shippingname 
+,nc.shipaddressline1 
+,nc.shipaddressline2 
+,nc.shipaddressline3 
+,nc.shipzipcode 
+,nc.shipcity 
+,nc.shipstate 
+,nc.shipcountry 
+,nc.shipphonetype 
+,nc.shipphonenumber 
+,nc.shipcellnumber 
+,nc.shipemailind 
+,nc.shipemailaddress 
+,nc.shipfaxno 
+,nc.shiplongitude 
+,nc.shiplatitude 
+,nc.customerbillingname 
+,nc.custbilladdressline1 
+,nc.custbilladdressline2 
+,nc.custbilladdressline3 
+,nc.custbillzipcode 
+,nc.custbillcity 
+,nc.custbillstate 
+,nc.custbillcountry 
+,nc.custbillphonetype 
+,nc.custbillphonenumber 
+,nc.custbillcellnumber 
+,nc.custbillemailind 
+,nc.custbillemailaddress 
+,nc.custbillfaxno 
+,nc.custbilllongitude 
+,nc.custbilllatitude 
+,nc.dateofbirth 
+,nc.birthdaymonth 
+,nc.deceaseddate 
+,nc.income 
+,nc.race 
+,nc.ethnicity 
+,nc.maritalstatus 
+,nc.gender 
+,nc.dwellingtype 
+,nc.homeassessedvalue 
+,nc.homemarketvalue 
+,nc.homeownervalue 
+,nc.homevaluepremier 
+,nc.lengthofresidence 
+,nc.numberofchildren 
+,nc.countryorigin 
+,nc.education 
+,nc.languagepreference 
+,nc.sourcesystem 
+,nc.sourcecreateddatetime  
+,nc.sourcemodifieddatetime 
+FROM @newcust AS nc;
+
+END;
+
+OUTPUT @deltacust
+    TO @customer
+    USING Outputters.Csv(outputHeader: true);

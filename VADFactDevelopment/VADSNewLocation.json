@@ -1,0 +1,270 @@
+{
+  "name": "VADSNewLocation",
+  "properties": {
+    "structure": [
+      {
+        "name": "vaversion",
+        "type": "String"
+      },
+      {
+        "name": "businessunitkey",
+        "type": "String"
+      },
+      {
+        "name": "locationnumber",
+        "type": "String"
+      },
+      {
+        "name": "locationtype",
+        "type": "String"
+      },
+      {
+        "name": "channel",
+        "type": "String"
+      },
+      {
+        "name": "locationname",
+        "type": "String"
+      },
+      {
+        "name": "locationabbreviationname",
+        "type": "String"
+      },
+      {
+        "name": "locationsecondaryname",
+        "type": "String"
+      },
+      {
+        "name": "hoursdescription",
+        "type": "String"
+      },
+      {
+        "name": "openigtime",
+        "type": "String"
+      },
+      {
+        "name": "closingtime",
+        "type": "String"
+      },
+      {
+        "name": "locationmanager",
+        "type": "String"
+      },
+      {
+        "name": "locationgroup",
+        "type": "String"
+      },
+      {
+        "name": "locationbrandid",
+        "type": "String"
+      },
+      {
+        "name": "locationbrandname",
+        "type": "String"
+      },
+      {
+        "name": "locationoperationaldate",
+        "type": "String"
+      },
+      {
+        "name": "locationtypecode",
+        "type": "String"
+      },
+      {
+        "name": "locationcenternumber",
+        "type": "String"
+      },
+      {
+        "name": "operationalstatusdesc",
+        "type": "String"
+      },
+      {
+        "name": "acquiredate",
+        "type": "String"
+      },
+      {
+        "name": "closedate",
+        "type": "String"
+      },
+      {
+        "name": "opendate",
+        "type": "String"
+      },
+      {
+        "name": "remodeldate",
+        "type": "String"
+      },
+      {
+        "name": "divisionid",
+        "type": "String"
+      },
+      {
+        "name": "divisionname",
+        "type": "String"
+      },
+      {
+        "name": "regionid",
+        "type": "String"
+      },
+      {
+        "name": "regionname",
+        "type": "String"
+      },
+      {
+        "name": "districtid",
+        "type": "String"
+      },
+      {
+        "name": "districtname",
+        "type": "String"
+      },
+      {
+        "name": "storedepartid",
+        "type": "String"
+      },
+      {
+        "name": "storedepartname",
+        "type": "String"
+      },
+      {
+        "name": "posregisterid",
+        "type": "String"
+      },
+      {
+        "name": "posregisterdsc",
+        "type": "String"
+      },
+      {
+        "name": "recipeintname",
+        "type": "String"
+      },
+      {
+        "name": "addressline1",
+        "type": "String"
+      },
+      {
+        "name": "addressline2",
+        "type": "String"
+      },
+      {
+        "name": "addressline3",
+        "type": "String"
+      },
+      {
+        "name": "zipcode",
+        "type": "String"
+      },
+      {
+        "name": "city",
+        "type": "String"
+      },
+      {
+        "name": "state",
+        "type": "String"
+      },
+      {
+        "name": "country",
+        "type": "String"
+      },
+      {
+        "name": "loationphone1",
+        "type": "String"
+      },
+      {
+        "name": "locationphone2",
+        "type": "String"
+      },
+      {
+        "name": "locationemail",
+        "type": "String"
+      },
+      {
+        "name": "faxno",
+        "type": "String"
+      },
+      {
+        "name": "longitude",
+        "type": "String"
+      },
+      {
+        "name": "latitude",
+        "type": "String"
+      },
+      {
+        "name": "mallname",
+        "type": "String"
+      },
+      {
+        "name": "outletind",
+        "type": "String"
+      },
+      {
+        "name": "onlineind",
+        "type": "String"
+      },
+      {
+        "name": "trafficlocationind",
+        "type": "String"
+      },
+      {
+        "name": "registercount",
+        "type": "String"
+      },
+      {
+        "name": "climatecode",
+        "type": "String"
+      },
+      {
+        "name": "displaysquarefoot",
+        "type": "String"
+      },
+      {
+        "name": "totalsquarefeet",
+        "type": "String"
+      },
+      {
+        "name": "pricezone",
+        "type": "String"
+      },
+      {
+        "name": "timezone",
+        "type": "String"
+      },
+      {
+        "name": "activeind",
+        "type": "String"
+      },
+      {
+        "name": "sourcesystem",
+        "type": "String"
+      },
+      {
+        "name": "sourcecreateddatetime",
+        "type": "String"
+      },
+      {
+        "name": "sourcemodifieddatetime",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "location.Csv",
+      "folderPath": "VAUnifiedmodel/Location/NEW",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

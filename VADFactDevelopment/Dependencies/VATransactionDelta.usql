@@ -1,0 +1,269 @@
+@newtrans = EXTRACT 
+vaversion string,
+transactionid string,
+lineid string,
+businessunitkey string,
+createddate string,
+productnumber string,
+storenumber string,
+currencykey string,
+customerkey string,
+deliverytypekey string,
+employeekey string,
+invoiceddatekey string,
+posterminalkey string,
+receiptdatekey string,
+returnstorekey string,
+returnterminalkey string,
+priceoverridereasoncodekey string,
+taxstate string,
+returnreasoncodekey string,
+returntransactionid string,
+headerdiscountreasoncodekey string,
+linediscountreasoncodekey string,
+retailamount string,
+netsalesamount string,
+netsalesincltax string,
+netsalesincltaxandshipping string,
+netquantity string,
+unitquantity string,
+unitcost string,
+unitretailprice string,
+grossmarginamount string,
+grosssalesamount string,
+itemprice string,
+itemstandardcost string,
+itempricecharges string,
+bonuscouponnonnetamount string,
+bonuscouponnonnetquantity string,
+cancelamount string,
+cancelquantity string,
+discountnonnetamount string,
+discountnonnetquantity string,
+discountquantity string,
+discountedtransind string,
+promoamount string,
+returnedtransind string,
+returnamount string,
+returnquantity string,
+storecouponamount string,
+storecouponquantity string,
+receiptnumber string,
+salesordernumber string,
+salesstatuskey string,
+salestypekey string,
+transactionstatuskey string,
+transactiontypekey string,
+vendorcouponnonnetamount string,
+vendorcouponnonnetquantity string,
+voidsalesamount string,
+voidsalesquantity string,
+taxamount string,
+totaldiscountamount string,
+configureddiscountamount string,
+customerquantity string,
+headerdiscountamount string,
+linediscountamount string,
+itemkeydquantity string,
+itemscanedquantity string,
+pickupdate string,
+extcost string,
+shippingcost string,
+activeind string,
+sourcesystem string,
+sourcecreateddatetime string,
+sourcemodifieddatetime string
+FROM @newtrans_file
+USING Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+IF (FILE.EXISTS(@oldtrans_file))
+THEN
+@oldtrans =
+EXTRACT vaversion string,
+transactionid string,
+lineid string,
+businessunitkey string,
+createddate string,
+productnumber string,
+storenumber string,
+currencykey string,
+customerkey string,
+deliverytypekey string,
+employeekey string,
+invoiceddatekey string,
+posterminalkey string,
+receiptdatekey string,
+returnstorekey string,
+returnterminalkey string,
+priceoverridereasoncodekey string,
+taxstate string,
+returnreasoncodekey string,
+returntransactionid string,
+headerdiscountreasoncodekey string,
+linediscountreasoncodekey string,
+retailamount string,
+netsalesamount string,
+netsalesincltax string,
+netsalesincltaxandshipping string,
+netquantity string,
+unitquantity string,
+unitcost string,
+unitretailprice string,
+grossmarginamount string,
+grosssalesamount string,
+itemprice string,
+itemstandardcost string,
+itempricecharges string,
+bonuscouponnonnetamount string,
+bonuscouponnonnetquantity string,
+cancelamount string,
+cancelquantity string,
+discountnonnetamount string,
+discountnonnetquantity string,
+discountquantity string,
+discountedtransind string,
+promoamount string,
+returnedtransind string,
+returnamount string,
+returnquantity string,
+storecouponamount string,
+storecouponquantity string,
+receiptnumber string,
+salesordernumber string,
+salesstatuskey string,
+salestypekey string,
+transactionstatuskey string,
+transactiontypekey string,
+vendorcouponnonnetamount string,
+vendorcouponnonnetquantity string,
+voidsalesamount string,
+voidsalesquantity string,
+taxamount string,
+totaldiscountamount string,
+configureddiscountamount string,
+customerquantity string,
+headerdiscountamount string,
+linediscountamount string,
+itemkeydquantity string,
+itemscanedquantity string,
+pickupdate string,
+extcost string,
+shippingcost string,
+activeind string,
+sourcesystem string,
+sourcecreateddatetime string,
+sourcemodifieddatetime string
+FROM @oldtrans_file
+USING Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+@deltatrans = SELECT 
+nt.vaversion
+,nt.transactionid
+,nt.lineid
+,nt.businessunitkey
+,nt.createddate
+,nt.productnumber
+,nt.storenumber
+,nt.currencykey
+,nt.customerkey
+,nt.deliverytypekey, 	
+nt.employeekey, nt.invoiceddatekey, 
+nt.posterminalkey, nt.receiptdatekey, 
+nt.returnstorekey, nt.returnterminalkey,
+nt.priceoverridereasoncodekey, 
+nt.taxstate, 
+nt.returnreasoncodekey,
+nt.returntransactionid,
+nt.headerdiscountreasoncodekey, 
+nt.linediscountreasoncodekey, 
+nt.retailamount, 
+nt.netsalesamount,
+nt.netsalesincltax, 
+nt.netsalesincltaxandshipping, 
+nt.netquantity, 
+nt.unitquantity,
+nt.unitcost,
+nt.unitretailprice, 
+nt.grossmarginamount, 
+nt.grosssalesamount,
+nt.itemprice, 
+nt.itemstandardcost, 
+nt.itempricecharges, 
+nt.bonuscouponnonnetamount,
+nt.bonuscouponnonnetquantity, 
+nt.cancelamount, 
+nt.cancelquantity,
+nt.discountnonnetamount, 
+nt.discountnonnetquantity, 
+nt.discountquantity,
+nt.discountedtransind, 
+nt.promoamount, 
+nt.returnedtransind, 
+nt.returnamount, 
+nt.returnquantity, 
+nt.storecouponamount,
+nt.storecouponquantity,
+nt.receiptnumber,
+nt.salesordernumber,
+nt.salesstatuskey,
+nt.salestypekey, 
+nt.transactionstatuskey,
+nt.transactiontypekey, 
+nt.vendorcouponnonnetamount,
+nt.vendorcouponnonnetquantity, 
+nt.voidsalesamount,
+nt.voidsalesquantity,
+nt.taxamount,
+nt.totaldiscountamount, 
+nt.configureddiscountamount, 
+nt.customerquantity, 
+nt.headerdiscountamount, 
+nt.linediscountamount, 
+nt.itemkeydquantity, 
+nt.itemscanedquantity,
+nt.pickupdate, 
+nt.extcost, 
+nt.shippingcost, 
+nt.activeind,
+nt.sourcesystem,
+nt.sourcecreateddatetime, 
+nt.sourcemodifieddatetime
+FROM @newtrans AS nt
+LEFT JOIN @oldtrans AS ot ON nt.vaversion==ot.vaversion AND nt.transactionid==ot.transactionid AND nt.lineid==ot.lineid
+ AND nt.businessunitkey==ot.businessunitkey AND nt.createddate==ot.createddate AND nt.productnumber==ot.productnumber 
+AND nt.storenumber==ot.storenumber AND nt.currencykey==ot.currencykey AND nt.customerkey==ot.customerkey 
+AND nt.deliverytypekey==ot.deliverytypekey AND nt.employeekey==ot.employeekey AND nt.invoiceddatekey==ot.invoiceddatekey 
+AND nt.posterminalkey==ot.posterminalkey AND nt.receiptdatekey==ot.receiptdatekey AND nt.returnstorekey==ot.returnstorekey 
+AND nt.returnterminalkey==ot.returnterminalkey AND nt.priceoverridereasoncodekey==ot.priceoverridereasoncodekey 
+AND nt.taxstate==ot.taxstate AND nt.returnreasoncodekey==ot.returnreasoncodekey AND nt.returntransactionid==ot.returntransactionid 
+AND nt.headerdiscountreasoncodekey==ot.headerdiscountreasoncodekey AND nt.linediscountreasoncodekey==ot.linediscountreasoncodekey 
+AND nt.retailamount==ot.retailamount AND nt.netsalesamount==ot.netsalesamount AND nt.netsalesincltax==ot.netsalesincltax 
+AND nt.netsalesincltaxandshipping==ot.netsalesincltaxandshipping AND nt.netquantity==ot.netquantity AND nt.unitquantity==ot.unitquantity 
+AND nt.unitcost==ot.unitcost AND nt.unitretailprice==ot.unitretailprice AND nt.grossmarginamount==ot.grossmarginamount 
+AND nt.grosssalesamount==ot.grosssalesamount AND nt.itemprice==ot.itemprice AND nt.itemstandardcost==ot.itemstandardcost 
+AND nt.itempricecharges==ot.itempricecharges AND nt.bonuscouponnonnetamount==ot.bonuscouponnonnetamount 
+AND nt.bonuscouponnonnetquantity==ot.bonuscouponnonnetquantity AND nt.cancelamount==ot.cancelamount 
+AND nt.cancelquantity==ot.cancelquantity AND nt.discountnonnetamount==ot.discountnonnetamount 
+AND nt.discountnonnetquantity==ot.discountnonnetquantity AND nt.discountquantity==ot.discountquantity 
+AND nt.discountedtransind==ot.discountedtransind AND nt.promoamount==ot.promoamount AND nt.returnedtransind==ot.returnedtransind 
+AND nt.returnamount==ot.returnamount AND nt.returnquantity==ot.returnquantity AND nt.storecouponamount==ot.storecouponamount
+ AND nt.storecouponquantity==ot.storecouponquantity AND nt.receiptnumber==ot.receiptnumber AND nt.salesordernumber==ot.salesordernumber 
+AND nt.salesstatuskey==ot.salesstatuskey AND nt.salestypekey==ot.salestypekey AND nt.transactionstatuskey==ot.transactionstatuskey 
+AND nt.transactiontypekey==ot.transactiontypekey AND nt.vendorcouponnonnetamount==ot.vendorcouponnonnetamount 
+AND nt.vendorcouponnonnetquantity==ot.vendorcouponnonnetquantity AND nt.voidsalesamount==ot.voidsalesamount AND nt.voidsalesquantity==ot.voidsalesquantity 
+AND nt.taxamount==ot.taxamount AND nt.totaldiscountamount==ot.totaldiscountamount AND nt.configureddiscountamount==ot.configureddiscountamount 
+AND nt.customerquantity==ot.customerquantity AND nt.headerdiscountamount==ot.headerdiscountamount AND nt.linediscountamount==ot.linediscountamount 
+AND nt.itemkeydquantity==ot.itemkeydquantity AND nt.itemscanedquantity==ot.itemscanedquantity AND nt.pickupdate==ot.pickupdate AND nt.extcost==ot.extcost 
+AND nt.shippingcost==ot.shippingcost AND nt.activeind==ot.activeind AND nt.sourcesystem==ot.sourcesystem AND nt.sourcecreateddatetime==ot.sourcecreateddatetime 
+AND nt.sourcemodifieddatetime==ot.sourcemodifieddatetime
+WHERE ot.vaversion IS NULL;
+
+ELSE
+
+@deltatrans = SELECT nt.vaversion, nt.transactionid, nt.lineid, nt.businessunitkey, nt.createddate, nt.productnumber, nt.storenumber, nt.currencykey, nt.customerkey, nt.deliverytypekey, 	nt.employeekey, nt.invoiceddatekey, nt.posterminalkey, nt.receiptdatekey, nt.returnstorekey, nt.returnterminalkey, nt.priceoverridereasoncodekey, nt.taxstate, nt.returnreasoncodekey, nt.returntransactionid, nt.headerdiscountreasoncodekey, nt.linediscountreasoncodekey, nt.retailamount, nt.netsalesamount, nt.netsalesincltax, nt.netsalesincltaxandshipping, nt.netquantity, nt.unitquantity, nt.unitcost, nt.unitretailprice, nt.grossmarginamount, nt.grosssalesamount, nt.itemprice, nt.itemstandardcost, nt.itempricecharges, nt.bonuscouponnonnetamount, nt.bonuscouponnonnetquantity, nt.cancelamount, nt.cancelquantity, nt.discountnonnetamount, nt.discountnonnetquantity, nt.discountquantity, nt.discountedtransind, nt.promoamount, nt.returnedtransind, nt.returnamount, nt.returnquantity, nt.storecouponamount, nt.storecouponquantity, nt.receiptnumber, nt.salesordernumber, nt.salesstatuskey, nt.salestypekey, nt.transactionstatuskey, nt.transactiontypekey, nt.vendorcouponnonnetamount, nt.vendorcouponnonnetquantity, nt.voidsalesamount, nt.voidsalesquantity, nt.taxamount, nt.totaldiscountamount, nt.configureddiscountamount, nt.customerquantity, nt.headerdiscountamount, nt.linediscountamount, nt.itemkeydquantity, nt.itemscanedquantity, nt.pickupdate, nt.extcost, nt.shippingcost, nt.activeind, nt.sourcesystem, nt.sourcecreateddatetime, nt.sourcemodifieddatetime
+FROM @newtrans AS nt;
+END;
+
+OUTPUT @deltatrans
+    TO @transaction
+    USING Outputters.Csv(outputHeader: true);

@@ -1,0 +1,14 @@
+{
+  "name": "VALnkOnPremDynamicsAX",
+  "properties": {
+    "description": "To Connect On Premises MicrosoftDynamicsAX database on 10.130.1.17 server",
+    "type": "OnPremisesSqlServer",
+    "typeProperties": {
+      "connectionString": "Data Source=10.130.1.17;Initial Catalog=MicrosoftDynamicsAX;Integrated Security=False;User ID=sa;Password=**********",
+      "gatewayName": "VAOnPremSQL",
+      "userName": "sa",
+      "password": "**********"
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.LinkedService.json"
+}

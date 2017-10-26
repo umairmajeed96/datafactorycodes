@@ -1,0 +1,642 @@
+{
+  "name": "VADSUnifReadDIRPARTYTABLE",
+  "properties": {
+    "structure": [
+      {
+        "name": "BUSINESSACTIVITY_SA",
+        "type": "String"
+      },
+      {
+        "name": "BUSINESSACTIVITYDESC_SA",
+        "type": "String"
+      },
+      {
+        "name": "FILENUMBER_SA",
+        "type": "String"
+      },
+      {
+        "name": "COMPANYNAFCODE",
+        "type": "Int64"
+      },
+      {
+        "name": "BUSINESSNUMBER_CA",
+        "type": "String"
+      },
+      {
+        "name": "SOFTWAREIDENTIFICATIONCODE_CA",
+        "type": "String"
+      },
+      {
+        "name": "FISCALCODE_IT",
+        "type": "String"
+      },
+      {
+        "name": "COMPANYTYPE_MX",
+        "type": "Int64"
+      },
+      {
+        "name": "RFC_MX",
+        "type": "String"
+      },
+      {
+        "name": "CURP_MX",
+        "type": "String"
+      },
+      {
+        "name": "STATEINSCRIPTION_MX",
+        "type": "String"
+      },
+      {
+        "name": "LEGALNATURE_IT",
+        "type": "Int64"
+      },
+      {
+        "name": "BANK",
+        "type": "String"
+      },
+      {
+        "name": "GIRO",
+        "type": "String"
+      },
+      {
+        "name": "REGNUM",
+        "type": "String"
+      },
+      {
+        "name": "COREGNUM",
+        "type": "String"
+      },
+      {
+        "name": "VATNUM",
+        "type": "String"
+      },
+      {
+        "name": "IMPORTVATNUM",
+        "type": "String"
+      },
+      {
+        "name": "UPSNUM",
+        "type": "String"
+      },
+      {
+        "name": "TAX1099REGNUM",
+        "type": "String"
+      },
+      {
+        "name": "NAMECONTROL",
+        "type": "String"
+      },
+      {
+        "name": "TCC",
+        "type": "String"
+      },
+      {
+        "name": "KEY_",
+        "type": "Int64"
+      },
+      {
+        "name": "DVRID",
+        "type": "String"
+      },
+      {
+        "name": "INTRASTATCODE",
+        "type": "String"
+      },
+      {
+        "name": "GIROCONTRACT",
+        "type": "String"
+      },
+      {
+        "name": "GIROCONTRACTACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "BRANCHID",
+        "type": "String"
+      },
+      {
+        "name": "VATNUMBRANCHID",
+        "type": "String"
+      },
+      {
+        "name": "IMPORTVATNUMBRANCHID",
+        "type": "String"
+      },
+      {
+        "name": "ACTIVITYCODE",
+        "type": "String"
+      },
+      {
+        "name": "CONVERSIONDATE",
+        "type": "Datetime"
+      },
+      {
+        "name": "ADDRFORMAT",
+        "type": "String"
+      },
+      {
+        "name": "COMPANYREGCOMFR",
+        "type": "String"
+      },
+      {
+        "name": "PACKMATERIALFEELICENSENUM",
+        "type": "String"
+      },
+      {
+        "name": "PAYMROUTINGDNB",
+        "type": "String"
+      },
+      {
+        "name": "PAYMTRADERNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "ISSUINGSIGNATURE",
+        "type": "String"
+      },
+      {
+        "name": "SIACODE",
+        "type": "String"
+      },
+      {
+        "name": "BANKCENTRALBANKPURPOSECODE",
+        "type": "String"
+      },
+      {
+        "name": "BANKCENTRALBANKPURPOSETEXT",
+        "type": "String"
+      },
+      {
+        "name": "DBA",
+        "type": "String"
+      },
+      {
+        "name": "FOREIGNENTITYINDICATOR",
+        "type": "Int64"
+      },
+      {
+        "name": "COMBINEDFEDSTATEFILER",
+        "type": "Int64"
+      },
+      {
+        "name": "LASTFILINGINDICATOR",
+        "type": "Int64"
+      },
+      {
+        "name": "VALIDATE1099ONENTRY",
+        "type": "Int64"
+      },
+      {
+        "name": "LEGALFORMFR",
+        "type": "String"
+      },
+      {
+        "name": "SHIPPINGCALENDARID",
+        "type": "String"
+      },
+      {
+        "name": "ENTERPRISENUMBER",
+        "type": "String"
+      },
+      {
+        "name": "BRANCHNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMSCUSTOMERNUMBER_FI",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMSLICENSENUMBER_FI",
+        "type": "String"
+      },
+      {
+        "name": "DATAAREA",
+        "type": "String"
+      },
+      {
+        "name": "PLANNINGCOMPANY",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXREPRESENTATIVE",
+        "type": "String"
+      },
+      {
+        "name": "ORGID",
+        "type": "String"
+      },
+      {
+        "name": "BANKACCTUSEDFOR1099",
+        "type": "String"
+      },
+      {
+        "name": "PAYMINSTRUCTION1",
+        "type": "Int64"
+      },
+      {
+        "name": "PAYMINSTRUCTION2",
+        "type": "Int64"
+      },
+      {
+        "name": "PAYMINSTRUCTION3",
+        "type": "Int64"
+      },
+      {
+        "name": "PAYMINSTRUCTION4",
+        "type": "Int64"
+      },
+      {
+        "name": "LEGALREPRESENTATIVENAME_MX",
+        "type": "String"
+      },
+      {
+        "name": "LEGALREPRESENTATIVERFC_MX",
+        "type": "String"
+      },
+      {
+        "name": "LEGALREPRESENTATIVECURP_MX",
+        "type": "String"
+      },
+      {
+        "name": "FICREDITORID_DK",
+        "type": "String"
+      },
+      {
+        "name": "ISCONSOLIDATIONCOMPANY",
+        "type": "Int64"
+      },
+      {
+        "name": "ISELIMINATIONCOMPANY",
+        "type": "Int64"
+      },
+      {
+        "name": "ACCOUNTINGPERSONNEL_JP",
+        "type": "String"
+      },
+      {
+        "name": "TEMPLATEFOLDER_W",
+        "type": "String"
+      },
+      {
+        "name": "COMPANYREPRESENTATIVE_JP",
+        "type": "String"
+      },
+      {
+        "name": "CNAE_BR",
+        "type": "String"
+      },
+      {
+        "name": "RESIDENT_W",
+        "type": "Int64"
+      },
+      {
+        "name": "PFREGNUM_RU",
+        "type": "String"
+      },
+      {
+        "name": "RALIENCORPCOUNTRY",
+        "type": "String"
+      },
+      {
+        "name": "RALIENCORPNAME",
+        "type": "String"
+      },
+      {
+        "name": "RFULLNAME",
+        "type": "String"
+      },
+      {
+        "name": "ENTERPRISECODE",
+        "type": "String"
+      },
+      {
+        "name": "COMMERCIALREGISTERSECTION",
+        "type": "String"
+      },
+      {
+        "name": "COMMERCIALREGISTERINSETNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "COMMERCIALREGISTER",
+        "type": "String"
+      },
+      {
+        "name": "FSS_RU",
+        "type": "String"
+      },
+      {
+        "name": "ORGANIZATIONLEGALFORM_RU",
+        "type": "String"
+      },
+      {
+        "name": "SUBORDINATECODE",
+        "type": "String"
+      },
+      {
+        "name": "FSSACCOUNT_RU",
+        "type": "String"
+      },
+      {
+        "name": "ACCOUNTANT_LT",
+        "type": "String"
+      },
+      {
+        "name": "ACCOUNTOFFICEREFNUM",
+        "type": "String"
+      },
+      {
+        "name": "BUSINESSCOMMENCEDDATE_JP",
+        "type": "Datetime"
+      },
+      {
+        "name": "BUSINESSINITIALCAPITAL_JP",
+        "type": "Decimal"
+      },
+      {
+        "name": "BUSINESSITEM_JP",
+        "type": "String"
+      },
+      {
+        "name": "CERTIFIEDTAXACCOUNTANT_JP",
+        "type": "String"
+      },
+      {
+        "name": "CUC_IT",
+        "type": "String"
+      },
+      {
+        "name": "HEAD_LT",
+        "type": "String"
+      },
+      {
+        "name": "LEGALREPRESENTATIVE_JP",
+        "type": "String"
+      },
+      {
+        "name": "PERSONINCHARGE_JP",
+        "type": "String"
+      },
+      {
+        "name": "PRINTCORRINVOICELABEL_DE",
+        "type": "Int64"
+      },
+      {
+        "name": "PRINTCORRINVOICELABELEFFDATE_DE",
+        "type": "Datetime"
+      },
+      {
+        "name": "PRINTENTERPRISEREGISTER_NO",
+        "type": "Int64"
+      },
+      {
+        "name": "PRINTINNKPPINADDRESS_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXAUTHORITY_RU",
+        "type": "String"
+      },
+      {
+        "name": "ORGANIZATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "OMOPERATINGUNITTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "HCMWORKER",
+        "type": "Int64"
+      },
+      {
+        "name": "OMOPERATINGUNITNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "INITIALS",
+        "type": "String"
+      },
+      {
+        "name": "CHILDRENNAMES",
+        "type": "String"
+      },
+      {
+        "name": "MARITALSTATUS",
+        "type": "Int64"
+      },
+      {
+        "name": "HOBBIES",
+        "type": "String"
+      },
+      {
+        "name": "GENDER",
+        "type": "Int64"
+      },
+      {
+        "name": "NAMESEQUENCE",
+        "type": "Int64"
+      },
+      {
+        "name": "PHONETICFIRSTNAME",
+        "type": "String"
+      },
+      {
+        "name": "PHONETICMIDDLENAME",
+        "type": "String"
+      },
+      {
+        "name": "PHONETICLASTNAME",
+        "type": "String"
+      },
+      {
+        "name": "PERSONALTITLE",
+        "type": "Int64"
+      },
+      {
+        "name": "PERSONALSUFFIX",
+        "type": "Int64"
+      },
+      {
+        "name": "PROFESSIONALTITLE",
+        "type": "String"
+      },
+      {
+        "name": "PROFESSIONALSUFFIX",
+        "type": "String"
+      },
+      {
+        "name": "BIRTHMONTH",
+        "type": "Int64"
+      },
+      {
+        "name": "BIRTHDAY",
+        "type": "Int64"
+      },
+      {
+        "name": "BIRTHYEAR",
+        "type": "Int64"
+      },
+      {
+        "name": "ANNIVERSARYMONTH",
+        "type": "Int64"
+      },
+      {
+        "name": "ANNIVERSARYDAY",
+        "type": "Int64"
+      },
+      {
+        "name": "ANNIVERSARYYEAR",
+        "type": "Int64"
+      },
+      {
+        "name": "COMMUNICATORSIGNIN",
+        "type": "Int64"
+      },
+      {
+        "name": "NUMBEROFEMPLOYEES",
+        "type": "Int64"
+      },
+      {
+        "name": "ORGNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "ABC",
+        "type": "Int64"
+      },
+      {
+        "name": "TEAMMEMBERSHIPCRITERION",
+        "type": "Int64"
+      },
+      {
+        "name": "DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "ISACTIVE",
+        "type": "Int64"
+      },
+      {
+        "name": "TEAMADMINISTRATOR",
+        "type": "String"
+      },
+      {
+        "name": "PHONETICNAME",
+        "type": "String"
+      },
+      {
+        "name": "DUNSNUMBERRECID",
+        "type": "Int64"
+      },
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "LANGUAGEID",
+        "type": "String"
+      },
+      {
+        "name": "NAMEALIAS",
+        "type": "String"
+      },
+      {
+        "name": "PARTYNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "INSTANCERELATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "KNOWNAS",
+        "type": "String"
+      },
+      {
+        "name": "PRIMARYADDRESSLOCATION",
+        "type": "Int64"
+      },
+      {
+        "name": "PRIMARYCONTACTEMAIL",
+        "type": "Int64"
+      },
+      {
+        "name": "PRIMARYCONTACTFAX",
+        "type": "Int64"
+      },
+      {
+        "name": "PRIMARYCONTACTPHONE",
+        "type": "Int64"
+      },
+      {
+        "name": "PRIMARYCONTACTTELEX",
+        "type": "Int64"
+      },
+      {
+        "name": "PRIMARYCONTACTURL",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "RELATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "EEENABLEPERSONALDATAREADLOG",
+        "type": "Int64"
+      },
+      {
+        "name": "EEENABLEROLECHANGELOG",
+        "type": "Int64"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "DIRPARTYTABLE.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

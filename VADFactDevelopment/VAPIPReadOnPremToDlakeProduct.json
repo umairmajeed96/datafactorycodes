@@ -1,0 +1,445 @@
+{
+  "name": "VAPIPReadOnPremToDlakeProduct",
+  "properties": {
+    "description": "",
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from ECORESPRODUCT"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadEcoresProduct"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteEcoresProduct"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_ECORESPRODUCT",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from ECORESPRODUCTTRANSLATION"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadEcoresProductTranslation"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteEcoresProductTranslation"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_ECORESPRODUCTTRANSLATION",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from INVENTTABLE"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadInventTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteInventTable"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_INVENTTABLE",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from INVENTITEMGROUPITEM"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadInventItemGroupItem"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteInventItemGroupItem"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_INVENTITEMGROUPITEM",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from INVENTITEMBARCODE"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadInventItemBarcode"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteInventItemBarcode"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_INVENTITEMBARCODE",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from EGXPRODUCTBRAND"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadEGXProductBrand"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteEGXProductBrand"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_EGXPRODUCTBRAND",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from RETAILSEASONTABLE"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadRetailSeasonTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteRetailSeasonTable"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_RETAILSEASONTABLE",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from INVENTDIMCOMBINATION"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadInventDIMCombination"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteInventDIMCombination"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_INVENTDIMCOMBINATION",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from DMFPRODUCTVARIANTENTITY"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadDMFProductVariantEntity"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteDMFProductVariantEntity"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_DMFPRODUCTVARIANTENTITY",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from DMFPRODUCTENTITY"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadDMFProductEntity"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteDMFProductEntity"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_DMFPRODUCTENTITY",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from INVENTITEMPRICE"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadInventItemPrice"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWriteInventItemPrice"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_INVENTITEMPRICE",
+        "description": "Copy data from on-prem SQL server to datalake"
+      },
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "SqlSource",
+            "sqlReaderQuery": "select * from PRICEDISCTABLE"
+          },
+          "sink": {
+            "type": "AzureQueueSink",
+            "writeBatchSize": 0,
+            "writeBatchTimeout": "00:00:00"
+          }
+        },
+        "inputs": [
+          {
+            "name": "VADSAXReadPriceDiscTable"
+          }
+        ],
+        "outputs": [
+          {
+            "name": "VADSAXWritePriceDiscTable"
+          }
+        ],
+        "policy": {
+          "timeout": "01:00:00",
+          "concurrency": 1,
+          "executionPriorityOrder": "NewestFirst",
+          "style": "StartOfInterval"
+        },
+        "scheduler": {
+          "frequency": "Day",
+          "interval": 1
+        },
+        "name": "CopyFromSQLtoDlake_PRICEDISCTABLE",
+        "description": "Copy data from on-prem SQL server to datalake"
+      }
+    ],
+    "start": "2017-10-23T00:00:00Z",
+    "end": "2017-10-23T00:00:00Z",
+    "isPaused": false,
+    "pipelineMode": "Scheduled"
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Pipeline.json"
+}

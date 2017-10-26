@@ -1,0 +1,110 @@
+{
+  "name": "VADSAXReadCREDITCARDCUST",
+  "properties": {
+    "structure": [
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "CUSTACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "EXPIRYDATE",
+        "type": "String"
+      },
+      {
+        "name": "NOTES",
+        "type": "String"
+      },
+      {
+        "name": "CARDNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "CARDTOKEN",
+        "type": "String"
+      },
+      {
+        "name": "CREDITCARDPROCESSORS",
+        "type": "Int64"
+      },
+      {
+        "name": "CREDITCARDTYPENAME",
+        "type": "String"
+      },
+      {
+        "name": "UNIQUECARDID",
+        "type": "String"
+      },
+      {
+        "name": "MODIFIEDDateTime",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_MODIFIEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "MODIFIEDTRANSACTIONID",
+        "type": "Int64"
+      },
+      {
+        "name": "CREATEDDateTime",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_CREATEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "String"
+      },
+      {
+        "name": "CREATEDTRANSACTIONID",
+        "type": "Int64"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      }
+    ],
+    "published": false,
+    "type": "SqlServerTable",
+    "linkedServiceName": "VALnkOnPremDynamicsAX",
+    "typeProperties": {
+      "tableName": "[dbo].[CREDITCARDCUST]"
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {
+      "externalData": {
+        "retryInterval": "00:01:00",
+        "retryTimeout": "00:10:00",
+        "maximumRetry": 3
+      }
+    }
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

@@ -1,0 +1,212 @@
+{
+  "name": "VADSAXReadRETAILTERMINALTABLE",
+  "properties": {
+    "structure": [
+      {
+        "name": "TERMINALID",
+        "type": "String"
+      },
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "LOCATION",
+        "type": "String"
+      },
+      {
+        "name": "STATEMENTMETHOD",
+        "type": "Int64"
+      },
+      {
+        "name": "TERMINALSTATEMENT",
+        "type": "Int64"
+      },
+      {
+        "name": "NOTACTIVE",
+        "type": "Int64"
+      },
+      {
+        "name": "CLOSINGSTATUS",
+        "type": "Int64"
+      },
+      {
+        "name": "MANAGERKEYONRETURN",
+        "type": "Int64"
+      },
+      {
+        "name": "EFTSTORERECID",
+        "type": "Int64"
+      },
+      {
+        "name": "OPENDRAWERATLILO",
+        "type": "Int64"
+      },
+      {
+        "name": "ONLYTOTALINSUSPENDEDTRANSACTION",
+        "type": "Int64"
+      },
+      {
+        "name": "EXITAFTEREACHTRANSACTION",
+        "type": "Int64"
+      },
+      {
+        "name": "AUTOLOGOFFTIMEOUT",
+        "type": "Int64"
+      },
+      {
+        "name": "RETURNINTRANSACTION",
+        "type": "Int64"
+      },
+      {
+        "name": "ITEMIDONRECEIPT",
+        "type": "Int64"
+      },
+      {
+        "name": "EFTTERMINALID",
+        "type": "String"
+      },
+      {
+        "name": "MAXRECEIPTTEXTLENGTH",
+        "type": "Int64"
+      },
+      {
+        "name": "NUMBEROFTOPBOTTOMLINES",
+        "type": "Int64"
+      },
+      {
+        "name": "RECEIPTSETUPLOCATION",
+        "type": "Int64"
+      },
+      {
+        "name": "MAXDISPLAYTEXTLENGTH",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTOMERDISPLAYTEXT1",
+        "type": "String"
+      },
+      {
+        "name": "CUSTOMERDISPLAYTEXT2",
+        "type": "String"
+      },
+      {
+        "name": "HARDWAREPROFILE",
+        "type": "String"
+      },
+      {
+        "name": "VISUALPROFILE",
+        "type": "String"
+      },
+      {
+        "name": "PRINTVATREFUNDCHECKS",
+        "type": "Int64"
+      },
+      {
+        "name": "RECEIPTPRINTINGDEFAULTOFF",
+        "type": "Int64"
+      },
+      {
+        "name": "RECEIPTBARCODE",
+        "type": "Int64"
+      },
+      {
+        "name": "CONCESSIONVENDACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "LAYOUTID",
+        "type": "String"
+      },
+      {
+        "name": "UPDATESERVICEPORT",
+        "type": "Int64"
+      },
+      {
+        "name": "IPADDRESS",
+        "type": "String"
+      },
+      {
+        "name": "STANDALONE",
+        "type": "Int64"
+      },
+      {
+        "name": "NUMBERSEQUENCEGROUPID",
+        "type": "String"
+      },
+      {
+        "name": "CONCESSIONVENDACCOUNTDATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTDIMENSION",
+        "type": "Int64"
+      },
+      {
+        "name": "EFTTENDERTYPEIDDEFAULT",
+        "type": "String"
+      },
+      {
+        "name": "SLIPIFRETURN",
+        "type": "Int64"
+      },
+      {
+        "name": "STORERECID",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_MODIFIEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "FISCALDOCUMENTSERIES",
+        "type": "String"
+      },
+      {
+        "name": "RETAILTERMINALOPERATIONMODE",
+        "type": "Int64"
+      },
+      {
+        "name": "SELECTHARDWARESTATIONONTENDERING",
+        "type": "Int64"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "SqlServerTable",
+    "linkedServiceName": "VALnkOnPremDynamicsAX",
+    "typeProperties": {
+      "tableName": "[dbo].[RETAILTERMINALTABLE]"
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

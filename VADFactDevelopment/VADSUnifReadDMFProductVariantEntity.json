@@ -1,0 +1,98 @@
+{
+  "name": "VADSUnifReadDMFProductVariantEntity",
+  "properties": {
+    "structure": [
+      {
+        "name": "DEFINITIONGROUP",
+        "type": "String"
+      },
+      {
+        "name": "DISPLAYPRODUCTNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTTRANSLATION_DESCRIPTION",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTTRANSLATION_LANGUAGEID",
+        "type": "String"
+      },
+      {
+        "name": "ECORESPRODUCTTRANSLATION_NAME",
+        "type": "String"
+      },
+      {
+        "name": "EXECUTIONID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTCOLORID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTCONFIGID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTSIZEID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTSTYLEID",
+        "type": "String"
+      },
+      {
+        "name": "ISSELECTED",
+        "type": "Int32"
+      },
+      {
+        "name": "ITEMID",
+        "type": "String"
+      },
+      {
+        "name": "RETAILVARIANTID",
+        "type": "String"
+      },
+      {
+        "name": "SEARCHNAME",
+        "type": "String"
+      },
+      {
+        "name": "TRANSFERSTATUS",
+        "type": "Int32"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int32"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "DMFProductVariantEntity.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

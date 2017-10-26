@@ -1,0 +1,278 @@
+{
+  "name": "VADSNewProduct",
+  "properties": {
+    "structure": [
+      {
+        "name": "VAVersion",
+        "type": "String"
+      },
+      {
+        "name": "BusinessUnitKey",
+        "type": "String"
+      },
+      {
+        "name": "ItemNumber",
+        "type": "String"
+      },
+      {
+        "name": "ItemDescription",
+        "type": "String"
+      },
+      {
+        "name": "ItemLongDescription",
+        "type": "String"
+      },
+      {
+        "name": "ItemHirarchylevl1",
+        "type": "String"
+      },
+      {
+        "name": "ItemHirarchylevl2",
+        "type": "String"
+      },
+      {
+        "name": "ItemHirarchylevl3",
+        "type": "String"
+      },
+      {
+        "name": "ItemHirarchylevl4",
+        "type": "String"
+      },
+      {
+        "name": "BrandID",
+        "type": "String"
+      },
+      {
+        "name": "BrandDescription",
+        "type": "String"
+      },
+      {
+        "name": "ItemTypeGroupCode",
+        "type": "String"
+      },
+      {
+        "name": "ItemTypeGroupDesc",
+        "type": "String"
+      },
+      {
+        "name": "CountryOfOrigin",
+        "type": "String"
+      },
+      {
+        "name": "TargetCountry",
+        "type": "String"
+      },
+      {
+        "name": "DiscontinuedDate",
+        "type": "String"
+      },
+      {
+        "name": "BarCodeType",
+        "type": "String"
+      },
+      {
+        "name": "ItemBarCode",
+        "type": "String"
+      },
+      {
+        "name": "PrimaryUPC",
+        "type": "String"
+      },
+      {
+        "name": "UPC",
+        "type": "String"
+      },
+      {
+        "name": "NonProfitInd",
+        "type": "String"
+      },
+      {
+        "name": "TaxInd",
+        "type": "String"
+      },
+      {
+        "name": "ScanTypeID",
+        "type": "String"
+      },
+      {
+        "name": "ScanTypeDescription",
+        "type": "String"
+      },
+      {
+        "name": "SeasonName",
+        "type": "String"
+      },
+      {
+        "name": "SeasonStartDate",
+        "type": "String"
+      },
+      {
+        "name": "SeasonEndDate",
+        "type": "String"
+      },
+      {
+        "name": "SeasonType",
+        "type": "String"
+      },
+      {
+        "name": "SeasonYear",
+        "type": "String"
+      },
+      {
+        "name": "VariantNumber",
+        "type": "String"
+      },
+      {
+        "name": "VariantName",
+        "type": "String"
+      },
+      {
+        "name": "Color",
+        "type": "String"
+      },
+      {
+        "name": "Size",
+        "type": "String"
+      },
+      {
+        "name": "Volume",
+        "type": "String"
+      },
+      {
+        "name": "Dimensions",
+        "type": "String"
+      },
+      {
+        "name": "Weight",
+        "type": "String"
+      },
+      {
+        "name": "ProdutGender",
+        "type": "String"
+      },
+      {
+        "name": "ProductFabric",
+        "type": "String"
+      },
+      {
+        "name": "ProductFabricPattern",
+        "type": "String"
+      },
+      {
+        "name": "ProductHeelType",
+        "type": "String"
+      },
+      {
+        "name": "ProductDressType",
+        "type": "String"
+      },
+      {
+        "name": "ProductFabricGroup",
+        "type": "String"
+      },
+      {
+        "name": "ProductContents",
+        "type": "String"
+      },
+      {
+        "name": "ProductFit",
+        "type": "String"
+      },
+      {
+        "name": "CutUps",
+        "type": "String"
+      },
+      {
+        "name": "JeansTye",
+        "type": "String"
+      },
+      {
+        "name": "BodyLength",
+        "type": "String"
+      },
+      {
+        "name": "FabricCare",
+        "type": "String"
+      },
+      {
+        "name": "SleeveLength",
+        "type": "String"
+      },
+      {
+        "name": "SleeveType",
+        "type": "String"
+      },
+      {
+        "name": "LengthType",
+        "type": "String"
+      },
+      {
+        "name": "Silhouette",
+        "type": "String"
+      },
+      {
+        "name": "CurrentCost",
+        "type": "String"
+      },
+      {
+        "name": "CurrentRetailPrice",
+        "type": "String"
+      },
+      {
+        "name": "Commodity",
+        "type": "String"
+      },
+      {
+        "name": "PrimaryVendor",
+        "type": "String"
+      },
+      {
+        "name": "PricingMethod",
+        "type": "String"
+      },
+      {
+        "name": "PriceMasterID",
+        "type": "String"
+      },
+      {
+        "name": "PriceMasterDescription",
+        "type": "String"
+      },
+      {
+        "name": "ActiveInd",
+        "type": "String"
+      },
+      {
+        "name": "SourceSystem",
+        "type": "String"
+      },
+      {
+        "name": "SourceCreatedDateTime",
+        "type": "String"
+      },
+      {
+        "name": "SourceModifiedDateTime",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "Product.Csv",
+      "folderPath": "VAUnifiedmodel/Product/NEW",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

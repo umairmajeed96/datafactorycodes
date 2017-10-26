@@ -1,0 +1,342 @@
+{
+  "name": "VADSUnifReadINVENTLOCATION",
+  "properties": {
+    "structure": [
+      {
+        "name": "INVENTLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "NAME",
+        "type": "String"
+      },
+      {
+        "name": "MANUAL",
+        "type": "Int64"
+      },
+      {
+        "name": "EMPTYPALLETLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "MAXPICKINGROUTEVOLUME",
+        "type": "Decimal"
+      },
+      {
+        "name": "PICKINGLINETIME",
+        "type": "Int64"
+      },
+      {
+        "name": "MAXPICKINGROUTETIME",
+        "type": "Int64"
+      },
+      {
+        "name": "WMSLOCATIONIDDEFAULTRECEIPT",
+        "type": "String"
+      },
+      {
+        "name": "WMSLOCATIONIDDEFAULTISSUE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTLOCATIONIDREQMAIN",
+        "type": "String"
+      },
+      {
+        "name": "REQREFILL",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTLOCATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTLOCATIONIDQUARANTINE",
+        "type": "String"
+      },
+      {
+        "name": "INVENTLOCATIONLEVEL",
+        "type": "Int64"
+      },
+      {
+        "name": "REQCALENDARID",
+        "type": "String"
+      },
+      {
+        "name": "WMSAISLENAMEACTIVE",
+        "type": "Int64"
+      },
+      {
+        "name": "WMSRACKNAMEACTIVE",
+        "type": "Int64"
+      },
+      {
+        "name": "WMSRACKFORMAT",
+        "type": "String"
+      },
+      {
+        "name": "WMSLEVELNAMEACTIVE",
+        "type": "Int64"
+      },
+      {
+        "name": "WMSLEVELFORMAT",
+        "type": "String"
+      },
+      {
+        "name": "WMSPOSITIONNAMEACTIVE",
+        "type": "Int64"
+      },
+      {
+        "name": "WMSPOSITIONFORMAT",
+        "type": "String"
+      },
+      {
+        "name": "USEWMSORDERS",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTLOCATIONIDTRANSIT",
+        "type": "String"
+      },
+      {
+        "name": "VENDACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "BRANCHNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "INVENTSITEID",
+        "type": "String"
+      },
+      {
+        "name": "INVENTCOUNTINGGROUP_BR",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTACCOUNT_BR",
+        "type": "String"
+      },
+      {
+        "name": "INVENTPROFILETYPE_RU",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTPROFILEID_RU",
+        "type": "String"
+      },
+      {
+        "name": "INVENTLOCATIONIDGOODSINROUTE_RU",
+        "type": "String"
+      },
+      {
+        "name": "WMSLOCATIONIDGOODSINROUTE_RU",
+        "type": "String"
+      },
+      {
+        "name": "ACTIVITYTYPE_RU",
+        "type": "String"
+      },
+      {
+        "name": "NUMBERSEQUENCEGROUP_RU",
+        "type": "String"
+      },
+      {
+        "name": "RETAILWEIGHTEX1",
+        "type": "Decimal"
+      },
+      {
+        "name": "FSHSTORE",
+        "type": "Int64"
+      },
+      {
+        "name": "RBODEFAULTWMSPALLETID",
+        "type": "String"
+      },
+      {
+        "name": "RBODEFAULTWMSLOCATIONID",
+        "type": "String"
+      },
+      {
+        "name": "RBODEFAULTINVENTPROFILEID_RU",
+        "type": "String"
+      },
+      {
+        "name": "ALLOWLABORSTANDARDS",
+        "type": "Int64"
+      },
+      {
+        "name": "ALLOWMARKINGRESERVATIONREMOVAL",
+        "type": "Int64"
+      },
+      {
+        "name": "CONSOLIDATESHIPATRTW",
+        "type": "Int64"
+      },
+      {
+        "name": "CUSTACCOUNT_HU",
+        "type": "String"
+      },
+      {
+        "name": "CYCLECOUNTALLOWPALLETMOVE",
+        "type": "Int64"
+      },
+      {
+        "name": "DECREMENTLOADLINE",
+        "type": "Int64"
+      },
+      {
+        "name": "DEFAULTKANBANFINISHEDGOODSLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTPRODUCTIONFINISHGOODSLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTSHIPMAINTENANCELOC",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTSTATUSID",
+        "type": "String"
+      },
+      {
+        "name": "PRINTBOLBEFORESHIPCONFIRM",
+        "type": "Int64"
+      },
+      {
+        "name": "PRODRESERVEONLYWHSE",
+        "type": "Int64"
+      },
+      {
+        "name": "REMOVEINVENTBLOCKINGONSTATUSCHANGE",
+        "type": "Int64"
+      },
+      {
+        "name": "RESERVEATLOADPOST",
+        "type": "Int64"
+      },
+      {
+        "name": "RETAILINVENTNEGFINANCIAL",
+        "type": "Int64"
+      },
+      {
+        "name": "RETAILINVENTNEGPHYSICAL",
+        "type": "Int64"
+      },
+      {
+        "name": "RETAILWMSLOCATIONIDDEFAULTRETURN",
+        "type": "String"
+      },
+      {
+        "name": "RETAILWMSPALLETIDDEFAULTRETURN",
+        "type": "String"
+      },
+      {
+        "name": "UNIQUECHECKDIGITS",
+        "type": "Int64"
+      },
+      {
+        "name": "VENDACCOUNTCUSTOM_RU",
+        "type": "String"
+      },
+      {
+        "name": "WAREHOUSEAUTORELEASERESERVATION",
+        "type": "Int64"
+      },
+      {
+        "name": "WHSENABLED",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_MODIFIEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "MODIFIEDBY",
+        "type": "String"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "DEL_CREATEDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "CREATEDBY",
+        "type": "String"
+      },
+      {
+        "name": "DATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int32"
+      },
+      {
+        "name": "DEFAULTPRODUCTIONINPUTLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTRETURNCREDITONLYLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTDIMENSION",
+        "type": "Int64"
+      },
+      {
+        "name": "VSIISINVENTJOURNAL",
+        "type": "Int64"
+      },
+      {
+        "name": "VSIISPURCHORDER",
+        "type": "Int64"
+      },
+      {
+        "name": "VSIISSALEORDER",
+        "type": "Int64"
+      },
+      {
+        "name": "VSIRTVLOCATION",
+        "type": "String"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "INVENTLOCATION.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

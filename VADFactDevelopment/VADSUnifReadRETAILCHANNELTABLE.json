@@ -1,0 +1,354 @@
+{
+  "name": "VADSUnifReadRETAILCHANNELTABLE",
+  "properties": {
+    "structure": [
+      {
+        "name": "MCRCUSTOMERCREDITRETAILINFOCODEID",
+        "type": "String"
+      },
+      {
+        "name": "MCRENABLEDIRECTEDSELLING",
+        "type": "Int64"
+      },
+      {
+        "name": "MCRENABLEORDERCOMPLETION",
+        "type": "Int64"
+      },
+      {
+        "name": "MCRENABLEORDERPRICECONTROL",
+        "type": "Int64"
+      },
+      {
+        "name": "MCRPRICEOVERRIDERETAILINFOCODEID",
+        "type": "String"
+      },
+      {
+        "name": "MCRREASONCODERETAILINFOCODEID",
+        "type": "String"
+      },
+      {
+        "name": "ONLINECATALOGNAME",
+        "type": "String"
+      },
+      {
+        "name": "STORENUMBER",
+        "type": "String"
+      },
+      {
+        "name": "PHONE",
+        "type": "String"
+      },
+      {
+        "name": "OPENFROM",
+        "type": "Int64"
+      },
+      {
+        "name": "OPENTO",
+        "type": "Int64"
+      },
+      {
+        "name": "STATEMENTMETHOD",
+        "type": "Int64"
+      },
+      {
+        "name": "ONESTATEMENTPERDAY",
+        "type": "Int64"
+      },
+      {
+        "name": "CLOSINGMETHOD",
+        "type": "Int64"
+      },
+      {
+        "name": "MAXIMUMPOSTINGDIFFERENCE",
+        "type": "Decimal"
+      },
+      {
+        "name": "MAXROUNDINGAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "MAXSHIFTDIFFERENCEAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "MAXTRANSACTIONDIFFERENCEAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "FUNCTIONALITYPROFILE",
+        "type": "String"
+      },
+      {
+        "name": "CREATELABELSFORZEROPRICE",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTORYLOOKUP",
+        "type": "Int64"
+      },
+      {
+        "name": "REMOVEADDTENDER",
+        "type": "String"
+      },
+      {
+        "name": "TENDERDECLARATIONCALCULATION",
+        "type": "Int64"
+      },
+      {
+        "name": "MAXIMUMTEXTLENGTHONRECEIPT",
+        "type": "Int64"
+      },
+      {
+        "name": "NUMBEROFTOPORBOTTOMLINES",
+        "type": "Int64"
+      },
+      {
+        "name": "ITEMIDONRECEIPT",
+        "type": "Int64"
+      },
+      {
+        "name": "SERVICECHARGEPCT",
+        "type": "Decimal"
+      },
+      {
+        "name": "SERVICECHARGEPROMPT",
+        "type": "String"
+      },
+      {
+        "name": "TAXGROUP",
+        "type": "String"
+      },
+      {
+        "name": "REPLICATIONCOUNTER",
+        "type": "Int64"
+      },
+      {
+        "name": "ROUNDINGTAXACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "MAXROUNDINGTAXAMOUNT",
+        "type": "Decimal"
+      },
+      {
+        "name": "USEDEFAULTCUSTACCOUNT",
+        "type": "Int64"
+      },
+      {
+        "name": "GENERATESSHELFLABELS",
+        "type": "Int64"
+      },
+      {
+        "name": "GENERATESITEMLABELS",
+        "type": "Int64"
+      },
+      {
+        "name": "CULTURENAME",
+        "type": "String"
+      },
+      {
+        "name": "RETAILREQPLANIDSCHED",
+        "type": "String"
+      },
+      {
+        "name": "SQLSERVERNAME",
+        "type": "String"
+      },
+      {
+        "name": "DATABASENAME",
+        "type": "String"
+      },
+      {
+        "name": "USERNAME",
+        "type": "String"
+      },
+      {
+        "name": "PASSWORD",
+        "type": "String"
+      },
+      {
+        "name": "POITEMFILTER",
+        "type": "Int64"
+      },
+      {
+        "name": "HIDETRAININGMODE",
+        "type": "Int64"
+      },
+      {
+        "name": "STMTCALCBATCHENDTIME",
+        "type": "Int64"
+      },
+      {
+        "name": "SEPARATESTMTPERSTAFFTERMINAL",
+        "type": "Int64"
+      },
+      {
+        "name": "USEDESTINATIONBASEDTAX",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXIDENTIFICATIONNUMBER",
+        "type": "String"
+      },
+      {
+        "name": "USECUSTOMERBASEDTAX",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTLOCATIONIDFORCUSTOMERORDER",
+        "type": "String"
+      },
+      {
+        "name": "OFFLINEPROFILE",
+        "type": "Int64"
+      },
+      {
+        "name": "RETURNTAXGROUP_W",
+        "type": "String"
+      },
+      {
+        "name": "ROUNDINGACCOUNTLEDGERDIMENSION",
+        "type": "Int64"
+      },
+      {
+        "name": "STMTPOSTASBUSINESSDAY",
+        "type": "Int64"
+      },
+      {
+        "name": "TAXGROUPDATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "TAXOVERRIDEGROUP",
+        "type": "Int64"
+      },
+      {
+        "name": "CASHOFFICE_RU",
+        "type": "String"
+      },
+      {
+        "name": "CATEGORYHIERARCHY",
+        "type": "Int64"
+      },
+      {
+        "name": "CHANNELTIMEZONE",
+        "type": "Int64"
+      },
+      {
+        "name": "CHANNELTIMEZONEINFOID",
+        "type": "String"
+      },
+      {
+        "name": "CHANNELTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "CURRENCY",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTCUSTACCOUNT",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTCUSTDATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "DEFAULTDIMENSION",
+        "type": "Int64"
+      },
+      {
+        "name": "EVENTNOTIFICATIONPROFILEID",
+        "type": "String"
+      },
+      {
+        "name": "INSTANCERELATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "INVENTLOCATION",
+        "type": "String"
+      },
+      {
+        "name": "INVENTLOCATIONDATAAREAID",
+        "type": "String"
+      },
+      {
+        "name": "OMOPERATINGUNITID",
+        "type": "Int64"
+      },
+      {
+        "name": "PAYMENT",
+        "type": "String"
+      },
+      {
+        "name": "PAYMMODE",
+        "type": "String"
+      },
+      {
+        "name": "PRICEINCLUDESSALESTAX",
+        "type": "Int64"
+      },
+      {
+        "name": "STOREAREA",
+        "type": "Decimal"
+      },
+      {
+        "name": "TRANSACTIONSERVICEPROFILE",
+        "type": "String"
+      },
+      {
+        "name": "RECVERSION",
+        "type": "Int64"
+      },
+      {
+        "name": "RELATIONTYPE",
+        "type": "Int64"
+      },
+      {
+        "name": "PARTITION",
+        "type": "Int64"
+      },
+      {
+        "name": "RECID",
+        "type": "Int64"
+      },
+      {
+        "name": "DISPLAYTAXPERTAXCOMPONENT",
+        "type": "Int64"
+      },
+      {
+        "name": "EFTSTORENUMBER",
+        "type": "String"
+      },
+      {
+        "name": "MODIFIEDDATETIME",
+        "type": "Datetime"
+      },
+      {
+        "name": "CREATEDDATETIME",
+        "type": "Datetime"
+      }
+    ],
+    "published": false,
+    "type": "AzureDataLakeStore",
+    "linkedServiceName": "VALnkDLake",
+    "typeProperties": {
+      "fileName": "RETAILCHANNELTABLE.Csv",
+      "folderPath": "DynamicsAX",
+      "format": {
+        "type": "TextFormat",
+        "columnDelimiter": ",",
+        "firstRowAsHeader": true
+      }
+    },
+    "availability": {
+      "frequency": "Day",
+      "interval": 1
+    },
+    "external": true,
+    "policy": {}
+  },
+  "$schema": "http://datafactories.schema.management.azure.com/schemas/2015-09-01/Microsoft.DataFactory.Table.json"
+}

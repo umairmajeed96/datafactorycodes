@@ -1,0 +1,343 @@
+@newfile =
+EXTRACT vaversion string
+,businessunitkey string
+,locationnumber string
+,locationtype string
+,channel string
+,locationname string
+,locationabbreviationname string
+,locationsecondaryname string
+,hoursdescription string
+,openigtime string
+,closingtime string
+,locationmanager string
+,locationgroup string
+,locationbrandid string
+,locationbrandname string
+,locationoperationaldate string
+,locationtypecode string
+,locationcenternumber string
+,operationalstatusdesc string
+,acquiredate string
+,closedate string
+,opendate string
+,remodeldate string
+,divisionid string
+,divisionname string
+,regionid string
+,regionname string
+,districtid string
+,districtname string
+,storedepartid string
+,storedepartname string
+,posregisterid string
+,posregisterdsc string
+,recipeintname string
+,addressline1 string
+,addressline2 string
+,addressline3 string
+,zipcode string
+,city string
+,state string
+,country string
+,loationphone1 string
+,locationphone2 string
+,locationemail string
+,faxno string
+,longitude string
+,latitude string
+,mallname string
+,outletind string
+,onlineind string
+,trafficlocationind string
+,registercount string
+,climatecode string
+,displaysquarefoot string
+,totalsquarefeet string
+,pricezone string
+,timezone string
+,activeind string
+,sourcesystem string
+,sourcecreateddatetime string
+,sourcemodifieddatetime string
+FROM @loc_newfile
+USING  Extractors.Csv(silent:true, skipFirstNRows: 1);
+
+
+IF (FILE.EXISTS(@loc_oldfile))
+THEN
+
+@oldfile =
+EXTRACT 
+vaversion string
+,businessunitkey string
+,locationnumber string
+,locationtype string
+,channel string
+,locationname string
+,locationabbreviationname string
+,locationsecondaryname string
+,hoursdescription string
+,openigtime string
+,closingtime string
+,locationmanager string
+,locationgroup string
+,locationbrandid string
+,locationbrandname string
+,locationoperationaldate string
+,locationtypecode string
+,locationcenternumber string
+,operationalstatusdesc string
+,acquiredate string
+,closedate string
+,opendate string
+,remodeldate string
+,divisionid string
+,divisionname string
+,regionid string
+,regionname string
+,districtid string
+,districtname string
+,storedepartid string
+,storedepartname string
+,posregisterid string
+,posregisterdsc string
+,recipeintname string
+,addressline1 string
+,addressline2 string
+,addressline3 string
+,zipcode string
+,city string
+,state string
+,country string
+,loationphone1 string
+,locationphone2 string
+,locationemail string
+,faxno string
+,longitude string
+,latitude string
+,mallname string
+,outletind string
+,onlineind string
+,trafficlocationind string
+,registercount string
+,climatecode string
+,displaysquarefoot string
+,totalsquarefeet string
+,pricezone string
+,timezone string
+,activeind string
+,sourcesystem string
+,sourcecreateddatetime string
+,sourcemodifieddatetime string
+FROM @loc_oldfile
+USING  Extractors.Csv(silent:true, skipFirstNRows: 1);
+
+
+@output= SELECT 
+nw.vaversion,
+nw.businessunitkey,
+nw.locationnumber,
+nw.locationtype,
+nw.channel,
+nw.locationname,
+nw.locationabbreviationname,
+nw.locationsecondaryname,
+nw.hoursdescription,
+nw.openigtime,
+nw.closingtime,
+nw.locationmanager,
+nw.locationgroup,
+nw.locationbrandid,
+nw.locationbrandname,
+nw.locationoperationaldate,
+nw.locationtypecode,
+nw.locationcenternumber,
+nw.operationalstatusdesc,
+nw.acquiredate,
+nw.closedate,
+nw.opendate,
+nw.remodeldate,
+nw.divisionid,
+nw.divisionname,
+nw.regionid,
+nw.regionname,
+nw.districtid,
+nw.districtname,
+nw.storedepartid,
+nw.storedepartname,
+nw.posregisterid,
+nw.posregisterdsc,
+nw.recipeintname,
+nw.addressline1,
+nw.addressline2,
+nw.addressline3,
+nw.zipcode,
+nw.city,
+nw.state,
+nw.country,
+nw.loationphone1,
+nw.locationphone2,
+nw.locationemail,
+nw.faxno,
+nw.longitude,
+nw.latitude,
+nw.mallname,
+nw.outletind,
+nw.onlineind,
+nw.trafficlocationind,
+nw.registercount,
+nw.climatecode,
+nw.displaysquarefoot,
+nw.totalsquarefeet,
+nw.pricezone,
+nw.timezone,
+nw.activeind,
+nw.sourcesystem,
+nw.sourcecreateddatetime,
+nw.sourcemodifieddatetime
+FROM @newfile AS nw
+LEFT JOIN @oldfile AS od ON nw.vaversion == od.vaversion
+AND nw.businessunitkey == od.businessunitkey 
+AND nw.locationnumber == od.locationnumber 
+AND nw.locationtype == od.locationtype 
+AND nw.channel == od.channel 
+AND nw.locationname == od.locationname 
+AND nw.locationabbreviationname == od.locationabbreviationname 
+AND nw.locationsecondaryname == od.locationsecondaryname 
+AND nw.hoursdescription == od.hoursdescription 
+AND nw.openigtime == od.openigtime 
+AND nw.closingtime == od.closingtime 
+AND nw.locationmanager == od.locationmanager 
+AND nw.locationgroup == od.locationgroup 
+AND nw.locationbrandid == od.locationbrandid 
+AND nw.locationbrandname == od.locationbrandname 
+AND nw.locationoperationaldate == od.locationoperationaldate 
+AND nw.locationtypecode == od.locationtypecode 
+AND nw.locationcenternumber == od.locationcenternumber 
+AND nw.operationalstatusdesc == od.operationalstatusdesc 
+AND nw.acquiredate == od.acquiredate 
+AND nw.closedate == od.closedate 
+AND nw.opendate == od.opendate 
+AND nw.remodeldate == od.remodeldate 
+AND nw.divisionid == od.divisionid 
+AND nw.divisionname == od.divisionname 
+AND nw.regionid == od.regionid 
+AND nw.regionname == od.regionname 
+AND nw.districtid == od.districtid 
+AND nw.districtname == od.districtname 
+AND nw.storedepartid == od.storedepartid 
+AND nw.storedepartname == od.storedepartname 
+AND nw.posregisterid == od.posregisterid 
+AND nw.posregisterdsc == od.posregisterdsc 
+AND nw.recipeintname == od.recipeintname 
+AND nw.addressline1 == od.addressline1 
+AND nw.addressline2 == od.addressline2 
+AND nw.addressline3 == od.addressline3 
+AND nw.zipcode == od.zipcode 
+AND nw.city == od.city 
+AND nw.state == od.state 
+AND nw.country == od.country
+AND nw.loationphone1 == od.loationphone1 
+AND nw.locationphone2 == od.locationphone2 
+AND nw.locationemail == od.locationemail 
+AND nw.faxno == od.faxno 
+AND nw.longitude == od.longitude 
+AND nw.latitude == od.latitude 
+AND nw.mallname == od.mallname 
+AND nw.outletind == od.outletind 
+AND nw.onlineind == od.onlineind 
+AND nw.trafficlocationind == od.trafficlocationind 
+AND nw.registercount == od.registercount 
+AND nw.climatecode == od.climatecode 
+AND nw.displaysquarefoot == od.displaysquarefoot 
+AND nw.totalsquarefeet == od.totalsquarefeet 
+AND nw.pricezone == od.pricezone 
+AND nw.timezone == od.timezone 
+AND nw.activeind == od.activeind 
+AND nw.sourcesystem == od.sourcesystem 
+AND nw.sourcecreateddatetime == od.sourcecreateddatetime 
+AND nw.sourcemodifieddatetime == od.sourcemodifieddatetime
+WHERE od.vaversion IS NULL;
+
+
+ELSE 
+
+
+@output= SELECT 
+nw.vaversion,
+nw.businessunitkey,
+nw.locationnumber,
+nw.locationtype,
+nw.channel,
+nw.locationname,
+nw.locationabbreviationname,
+nw.locationsecondaryname,
+nw.hoursdescription,
+nw.openigtime,
+nw.closingtime,
+nw.locationmanager,
+nw.locationgroup,
+nw.locationbrandid,
+nw.locationbrandname,
+nw.locationoperationaldate,
+nw.locationtypecode,
+nw.locationcenternumber,
+nw.operationalstatusdesc,
+nw.acquiredate,
+nw.closedate,
+nw.opendate,
+nw.remodeldate,
+nw.divisionid,
+nw.divisionname,
+nw.regionid,
+nw.regionname,
+nw.districtid,
+nw.districtname,
+nw.storedepartid,
+nw.storedepartname,
+nw.posregisterid,
+nw.posregisterdsc,
+nw.recipeintname,
+nw.addressline1,
+nw.addressline2,
+nw.addressline3,
+nw.zipcode,
+nw.city,
+nw.state,
+nw.country,
+nw.loationphone1,
+nw.locationphone2,
+nw.locationemail,
+nw.faxno,
+nw.longitude,
+nw.latitude,
+nw.mallname,
+nw.outletind,
+nw.onlineind,
+nw.trafficlocationind,
+nw.registercount,
+nw.climatecode,
+nw.displaysquarefoot,
+nw.totalsquarefeet,
+nw.pricezone,
+nw.timezone,
+nw.activeind,
+nw.sourcesystem,
+nw.sourcecreateddatetime,
+nw.sourcemodifieddatetime
+FROM @newfile AS nw;
+
+END;
+
+OUTPUT @output
+TO @location
+USING Outputters.Csv(outputHeader: true);
+
+
+
+
+
+
+
+

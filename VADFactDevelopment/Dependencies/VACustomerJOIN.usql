@@ -1,0 +1,550 @@
+@inputA = 
+EXTRACT 
+accountnum	string
+,invoiceaccount	string
+,custgroup	string
+,linedisc	string
+,paymtermid	string
+,cashdisc	string
+,currency	string
+,intercompanyautocreateorders	int?
+,salesgroup	string
+,blocked	int?
+,onetimecustomer	int?
+,accountstatement	int?
+,creditmax	decimal
+,mandatorycreditlimit	int?
+,vendaccount	string
+,pricegroup	string
+,multilinedisc	string
+,enddisc	string
+,vatnum	string
+,inventlocation	string
+,dlvterm	string
+,dlvmode	string
+,markupgroup	string
+,clearingperiod	string
+,freightzone	string
+,creditrating	string
+,taxgroup	string
+,statisticsgroup	string
+,paymmode	string
+,commissiongroup	string
+,bankaccount	string
+,paymsched	string
+,contactpersonid	string
+,invoiceaddress	int?
+,ouraccountnum	string
+,salespoolid	string
+,incltax	int?
+,custitemgroupid	string
+,numbersequencegroup	string
+,paymdayid	string
+,lineofbusinessid	string
+,destinationcodeid	string
+,girotype	int?
+,suppitemgroupid	string
+,girotypeinterestnote	int?
+,taxlicensenum	string
+,websalesorderdisplay	int?
+,paymspec	string
+,bankcentralbankpurposetext	string
+,bankcentralbankpurposecode	string
+,intercompanyallowindirectcreation	int?
+,packmaterialfeelicensenum	string
+,taxbordernumber_fi	string
+,einvoiceeannum	string
+,fiscalcode	string
+,dlvreason	string
+,forecastdmpinclude	int?
+,girotypecollectionletter	int?
+,salescalendarid	string
+,custclassificationid	string
+,intercompanydirectdelivery	int?
+,enterprisenumber	string
+,shipcarrieraccount	string
+,girotypeprojinvoice	int?
+,inventsiteid	string
+,orderentrydeadlinegroupid	string
+,shipcarrierid	string
+,shipcarrierfuelsurcharge	int?
+,shipcarrierblindshipment	int?
+,shipcarrieraccountcode	string
+,girotypefreetextinvoice	int?
+,syncentityid	string
+,syncversion	int?
+,memo	string
+,salesdistrictid	string
+,segmentid	string
+,subsegmentid	string
+,rfiditemtagging	int?
+,rfidcasetagging	int?
+,rfidpallettagging	int?
+,companychainid	string
+,companyidsiret	string
+,party	int?
+,identificationnumber	string
+,partycountry	string
+,partystate	string
+,orgid	string
+,paymidtype	string
+,factoringaccount	string
+,defaultdimension	int?
+,custexcludecollectionfee	int?
+,custexcludeinterestcharges	int?
+,companynafcode	int?
+,bankcustpaymidtable	int?
+,girotypeaccountstatement	int?
+,maincontactworker	int?
+,creditcardaddressverification	int?
+,creditcardcvc	int?
+,creditcardaddressverificationvoid	int?
+,creditcardaddressverificationlevel	int?
+,companytype_mx	int?
+,rfc_mx	string
+,curp_mx	string
+,stateinscription_mx	string
+,residenceforeigncountryregionid_it	string
+,birthcountycode_it	string
+,birthdate_it	DateTime
+,birthplace_it	string
+,einvoice	int?
+,ccmnum_br	string
+,cnpjcpfnum_br	string
+,pbacustgroupid	string
+,ienum_br	string
+,suframanumber_br	string
+,suframa_br	int?
+,custfinaluser_br	int?
+,interestcode_br	string
+,finecode_br	string
+,suframapiscofins_br	int?
+,taxwithholdcalculate_th	int?
+,taxwithholdgroup_th	string
+,consday_jp	int?
+,nit_br	string
+,insscei_br	string
+,cnae_br	string
+,icmscontributor_br	int?
+,servicecodeondlvaddress_br	int?
+,inventprofiletype_ru	int?
+,inventprofileid_ru	string
+,taxwithholdcalculate_in	int?
+,unitedvatinvoice_lt	int?
+,enterprisecode	string
+,commercialregistersection	string
+,commercialregisterinsetnumber	string
+,commercialregister	string
+,regnum_w	string
+,isresident_lv	int?
+,intbank_lv	string
+,paymentreference_ee	string
+,packagedepositexcempt_pl	int?
+,fednonfedindicator	int?
+,irs1099cindicator	int?
+,agencylocationcode	string
+,federalcomments	string
+,usepurchrequest	int?
+,mcrmergedparent	string
+,mcrmergedroot	string
+,affiliated_ru	int?
+,cashdiscbasedays	int?
+,custtradingpartnercode	int?
+,custwhtcontributiontype_br	int?
+,daxintegrationid	string
+,defaultdirectdebitmandate	int?
+,defaultinventstatusid	string
+,entrycertificaterequired_w	int?
+,exportsales_pl	int?
+,expressbilloflading	int?
+,fiscaldoctype_pl	int?
+,foreignresident_ru	int?
+,generateincomingfiscaldocument_br	int?
+,invoicepostingtype_ru	int?
+,issueownentrycertificate_w	int?
+,issuercountry_hu	string
+,lvpaymtranscodes	int?
+,mandatoryvatdate_pl	int?
+,passportno_hu	string
+,pdscustrebategroupid	string
+,pdsfreightaccrued	int?
+,pdsrebatetmagroup	string
+,taxperiodpaymentcode_pl	string
+,usecashdisc	int?
+,modifiedDateTime	DateTime
+,del_modifiedtime	int?
+,modifiedby	string
+,createdDateTime	DateTime
+,del_createdtime	int?
+,dataareaid	string
+,recversion	int?
+,[partition] string
+,recid	string
+,einvoiceregister_it	int?
+,foreignerid_br	string
+,authorityoffice_it	string
+,foreigntaxregistration_mx	string
+,presencetype_br	int?
+,taxgstreliefgroupheading_my	int?
+,egxedi	int?
+,slbirthmonth	string
+FROM @custtable
+USING  Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+
+@inputB = 
+EXTRACT 
+	businessactivity_sa	string
+	,businessactivitydesc_sa	string
+	,filenumber_sa	string
+	,companynafcode	int?
+	,businessnumber_ca	string
+	,softwareidentificationcode_ca	string
+	,fiscalcode_it	string
+	,companytype_mx	int?
+	,rfc_mx	string
+	,curp_mx	string
+	,stateinscription_mx	string
+	,legalnature_it	int?
+	,bank	string
+	,giro	string
+	,regnum	string
+	,coregnum	string
+	,vatnum	string
+	,importvatnum	string
+	,upsnum	string
+	,tax1099regnum	string
+	,namecontrol	string
+	,tcc	string
+	,key_	int?
+	,dvrid	string
+	,intrastatcode	string
+	,girocontract	string
+	,girocontractaccount	string
+	,branchid	string
+	,vatnumbranchid	string
+	,importvatnumbranchid	string
+	,activitycode	string
+	,conversiondate	DateTime
+	,addrformat	string
+	,companyregcomfr	string
+	,packmaterialfeelicensenum	string
+	,paymroutingdnb	string
+	,paymtradernumber	string
+	,issuingsignature	string
+	,siacode	string
+	,bankcentralbankpurposecode	string
+	,bankcentralbankpurposetext	string
+	,dba	string
+	,foreignentityindicator	int?
+	,combinedfedstatefiler	int?
+	,lastfilingindicator	int?
+	,validate1099onentry	int?
+	,legalformfr	string
+	,shippingcalendarid	string
+	,enterprisenumber	string
+	,branchnumber	string
+	,customscustomernumber_fi	string
+	,customslicensenumber_fi	string
+	,dataarea	string
+	,planningcompany	int?
+	,taxrepresentative	string
+	,orgid	string
+	,bankacctusedfor1099	string
+	,payminstruction1	int?
+	,payminstruction2	int?
+	,payminstruction3	int?
+	,payminstruction4	int?
+	,legalrepresentativename_mx	string
+	,legalrepresentativerfc_mx	string
+	,legalrepresentativecurp_mx	string
+	,ficreditorid_dk	string
+	,isconsolidationcompany	int?
+	,iseliminationcompany	int?
+	,accountingpersonnel_jp	string
+	,templatefolder_w	string
+	,companyrepresentative_jp	string
+	,cnae_br	string
+	,resident_w	int?
+	,pfregnum_ru	string
+	,raliencorpcountry	string
+	,raliencorpname	string
+	,rfullname	string
+	,enterprisecode	string
+	,commercialregistersection	string
+	,commercialregisterinsetnumber	string
+	,commercialregister	string
+	,fss_ru	string
+	,organizationlegalform_ru	string
+	,subordinatecode	string
+	,fssaccount_ru	string
+	,accountant_lt	string
+	,accountofficerefnum	string
+	,businesscommenceddate_jp	DateTime
+	,businessinitialcapital_jp	decimal
+	,businessitem_jp	string
+	,certifiedtaxaccountant_jp	string
+	,cuc_it	string
+	,head_lt	string
+	,legalrepresentative_jp	string
+	,personincharge_jp	string
+	,printcorrinvoicelabel_de	int?
+	,printcorrinvoicelabeleffdate_de	DateTime
+	,printenterpriseregister_no	int?
+	,printinnkppinaddress_ru	int?
+	,taxauthority_ru	string
+	,organizationtype	int?
+	,omoperatingunittype	int?
+	,hcmworker	int?
+	,omoperatingunitnumber	string
+	,initials	string
+	,childrennames	string
+	,maritalstatus	int?
+	,hobbies	string
+	,gender	int?
+	,namesequence	int?
+	,phoneticfirstname	string
+	,phoneticmiddlename	string
+	,phoneticlastname	string
+	,personaltitle	int?
+	,personalsuffix	int?
+	,professionaltitle	string
+	,professionalsuffix	string
+	,birthmonth	int?
+	,birthday	int?
+	,birthyear	int?
+	,anniversarymonth	int?
+	,anniversaryday	int?
+	,anniversaryyear	int?
+	,communicatorsignin	int?
+	,numberofemployees	int?
+	,orgnumber	string
+	,abc	int?
+	,teammembershipcriterion	int?
+	,[description]	string
+	,isactive	int?
+	,teamadministrator	string
+	,phoneticname	string
+	,dunsnumberrecid	int?
+	,[name]	string
+	,languageid	string
+	,namealias	string
+	,partynumber	string
+	,instancerelationtype	int?
+	,knownas	string
+	,primaryaddresslocation	int?
+	,primarycontactemail	int?
+	,primarycontactfax	int?
+	,primarycontactphone	int?
+	,primarycontacttelex	int?
+	,primarycontacturl	int?
+	,modifieddatetime	DateTime
+	,modifiedby	string
+	,createddatetime	DateTime
+	,createdby	string
+	,recversion	int?
+	,relationtype	int?
+	,[partition]  string
+	,recid	string
+	,eeenablepersonaldatareadlog	int?
+	,eeenablerolechangelog	int?
+FROM @dirpartytable
+USING  Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+
+@inputC = 
+EXTRACT 
+[name]	string
+,custaccount	string
+,expirydate	string
+,notes	string
+,cardnumber	string
+,cardtoken	string
+,creditcardprocessors	int?
+,creditcardtypename	string
+,uniquecardid	string
+,modifieddatetime	DateTime
+,del_modifiedtime	int?
+,modifiedby	string
+,modifiedtransactionid	int?
+,createddatetime	DateTime
+,del_createdtime	int?
+,createdby	string
+,createdtransactionid	int?
+,dataareaid	string
+,recversion	int?
+,[partition]	string
+,recid	string
+FROM @creditcardcust
+USING  Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+
+@inputD = 
+EXTRACT
+		address	string,
+		countryregionid	string,
+		zipcode	string,
+		state	string,
+		county	string,
+		city	string,
+		street	string,
+		latitude	string,
+		longitude	string,
+		timezone	int?,
+		streetnumber	string,
+		buildingcompliment	string,
+		postbox	string,
+		cityrecid	int?,
+		district	int?,
+		[location]	int?,
+		zipcoderecid	int?,
+		validto	DateTime,
+		validtotzid	int?,
+		validfrom	DateTime,
+		validfromtzid	int?,
+		districtname	string,
+		streetid_ru	int?,
+		houseid_ru	int?,
+		flatid_ru	int?,
+		apartment_ru	string,
+		building_ru	string,
+		citykana_jp	string,
+		isprivate	int?,
+		privateforparty	int?,
+		streetkana_jp	string,
+		modifieddatetime	DateTime,
+		modifiedby	string,
+		recversion	int?,
+		[partition]  string,
+		recid	string,
+		edgeaxintegrationkey	string,
+		vsiecomid	int?,
+		createddatetime	DateTime
+FROM @logisticspostaladdress
+USING  Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+
+
+@inputE = 
+EXTRACT
+locator	string
+,locatorextension	string
+,[location]	int?
+,countryregioncode	string
+,[type]	int?
+,[description]	string
+,isinstantmessage	int?
+,ismobilephone	int?
+,isprimary	int?
+,isprivate	int?
+,privateforparty	int?
+,modifiedby	string
+,recversion	int?
+,[partition]	string
+,recid	string
+,modifieddatetime	DateTime
+,createddatetime	DateTime
+FROM @logisticselectronicaddress
+USING  Extractors.Csv(silent:true,  skipFirstNRows: 1);
+
+
+
+@output =
+SELECT
+2 AS vaversion
+,A.dataareaid AS businessunitkey
+,A.accountnum AS customerid
+,B.[name] AS firstname
+,(string)null AS  middlename
+,(string)null AS lastname
+,A.custgroup AS customergroupnumber
+,(string)null AS customergroupname
+,(string)null AS createlocationid
+,(string)null AS householdid
+,(string)null AS activeid
+,(string)null AS goldpremiumind
+,(string)null AS regularind
+,(string)null AS mailorderbuyerind
+,(string)null AS mailorderresponderind
+,(string)null AS mobpurchasingind
+,(string)null AS workingwomenind
+,(string)null AS ecomcustomerind
+,(string)null AS oktoemailind
+,(string)null AS donotpromoteind
+,(string)null AS oktomailind
+,(string)null AS oktophoneind
+,(string)null AS promotableind
+,(string)null AS addressreliableind
+,(string)null AS smsind
+,(string)null AS callind
+,(string)null AS guestcustomerind
+,C.creditcardtypename AS creditcardtype
+,(string)null AS activeprivatecardind
+,(string)null AS closedprivatecardind
+,(string)null AS declineprivatecardind
+,(string)null AS loyaltycardname
+,(string)null AS loyaltycardtype
+,(string)null AS loyaltycardsignupdate
+,(string)null AS shippingname
+,D.address AS shipaddressline1
+,(string)null AS shipaddressline2
+,(string)null AS shipaddressline3
+,D.zipcode AS shipzipcode
+,D.city AS shipcity
+,D.state AS shipstate
+,D.countryregionid AS shipcountry
+,(string)null AS shipphonetype
+,E.locator AS shipphonenumber
+,(string)null AS shipcellnumber
+,(string)null AS shipemailind
+,E.locator AS shipemailaddress
+,(string)null AS shipfaxno
+,(string)null AS shiplongitude
+,(string)null AS shiplatitude
+,(string)null AS customerbillingname
+,(string)null AS custbilladdressline1
+,(string)null AS custbilladdressline2
+,(string)null AS custbilladdressline3
+,(string)null AS custbillzipcode
+,(string)null AS custbillcity
+,(string)null AS custbillstate
+,(string)null AS custbillcountry
+,(string)null AS custbillphonetype
+,(string)null AS custbillphonenumber
+,(string)null AS custbillcellnumber
+,(string)null AS custbillemailind
+,(string)null AS custbillemailaddress
+,(string)null AS custbillfaxno
+,(string)null AS custbilllongitude
+,(string)null AS custbilllatitude
+,(string)null AS dateofbirth
+,(string)null AS birthdaymonth
+,(string)null AS deceaseddate
+,(string)null AS income
+,(string)null AS race
+,(string)null AS ethnicity
+,(string)null AS maritalstatus
+,(string)null AS gender
+,(string)null AS dwellingtype
+,(string)null AS homeassessedvalue
+,(string)null AS homemarketvalue
+,(string)null AS homeownervalue
+,(string)null AS homevaluepremier
+,(string)null AS lengthofresidence
+,(string)null AS numberofchildren
+,(string)null AS countryorigin
+,(string)null AS education
+,(string)null AS languagepreference
+,"DynamicsAX" AS sourcesystem
+,DateTime.Now.ToString("M/d/yyyy") AS sourcecreateddatetime
+,(string)null AS sourcemodifieddatetime 
+FROM @inputA AS A
+LEFT JOIN @inputC AS C ON C.custaccount == A.accountnum AND C.[partition] == A.[partition] AND A.dataareaid == C.dataareaid 
+LEFT JOIN @inputD AS D ON D.[partition] == A.[partition] AND A.recid == D.recid 
+LEFT JOIN @inputE AS E ON D.privateforparty == E.privateforparty AND D.[partition] == E.[partition] AND D.recid == E.recid 
+LEFT JOIN @inputB AS B ON B.[partition] == A.[partition]  AND B.primaryaddresslocation == D.[location];
+
+
+OUTPUT @output
+    TO @customer
+    USING Outputters.Csv(outputHeader: true);
